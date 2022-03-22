@@ -45,6 +45,7 @@ module.exports = merge(common, {
     minimize: true,
     minimizer: [
       new TerserPlugin({
+        parallel: true,
         terserOptions: {
           format: {
             comments: false,
