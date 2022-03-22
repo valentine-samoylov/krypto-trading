@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./dist/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
+  content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,jsx,ts,tsx}'],
   theme: {
     screens: {
       sm: '640px',

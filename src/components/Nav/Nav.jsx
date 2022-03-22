@@ -46,7 +46,7 @@ const Nav = () => {
       </button>
 
       <menu
-        className={`fixed top-0 right-0 w-full bg-cs-primary/95 shadow-md transition-transform ease-in duration-500 lg:static lg:w-auto lg:h-auto lg:shadow-none lg:translate-y-0 ${
+        className={`fixed top-0 right-0 w-full bg-cs-primary rounded-b-xl shadow-md transition-transform ease-in duration-500 lg:static lg:w-auto lg:h-auto lg:rounded-none lg:shadow-none lg:translate-y-0 ${
           navIsOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
       >

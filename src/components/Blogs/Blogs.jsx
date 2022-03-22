@@ -2,43 +2,13 @@
 import Section from '@components/Section/Section'
 import BlogCard from '@components/BlogCard/BlogCard'
 import ButtonLink from '@components/Button/ButtonLink'
-import articleImg01 from '@assets/images/content/blogs-01.jpg?as=webp'
-import articleImg02 from '@assets/images/content/blogs-02.jpg?as=webp'
-import articleImg03 from '@assets/images/content/blogs-03.jpg?as=webp'
-import articleImg04 from '@assets/images/content/blogs-04.jpg?as=webp'
-import coinMN from '@assets/images/decorations/coin-MN.png?as=webp'
+import { blogsContent } from './blogsContent'
+import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'Crypto Market Analysis',
   paragraphText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
 }
-
-const articlesContent = [
-  {
-    imgSrc: articleImg01,
-    title: 'How to trade Bitcoin',
-    text: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
-    linkHref: '#',
-  },
-  {
-    imgSrc: articleImg02,
-    title: 'Gain the best exchange',
-    text: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
-    linkHref: '#',
-  },
-  {
-    imgSrc: articleImg03,
-    title: 'Reduce your loosing',
-    text: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
-    linkHref: '#',
-  },
-  {
-    imgSrc: articleImg04,
-    title: 'Win 50-50 trading strategy',
-    text: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
-    linkHref: '#',
-  },
-]
 
 const Blogs = () => {
   return (
@@ -55,7 +25,7 @@ const Blogs = () => {
         ></div>
 
         <div className="grid gap-8 mb-12 md:grid-cols-2">
-          {articlesContent.map((item, idx) => (
+          {blogsContent.map((item, idx) => (
             <BlogCard item={item} key={idx} />
           ))}
         </div>

@@ -8,10 +8,10 @@ import IconBitcoin from '@assets/images/svg/coin-icon-01.svg'
 import IconLitecoin from '@assets/images/svg/coin-icon-02.svg'
 import IconChainlink from '@assets/images/svg/coin-icon-03.svg'
 import IconSiacoin from '@assets/images/svg/coin-icon-04.svg'
-import coinBTC from '@assets/images/decorations/coin-BTC.png?as=webp'
-import coinETH from '@assets/images/decorations/coin-ETH.png?as=webp'
-import coinLTC from '@assets/images/decorations/coin-LTC-01.png?as=webp'
-import coinMN from '@assets/images/decorations/coin-MN.png?as=webp'
+import coinBTC from '@assets/images/bg/coin-BTC.png?as=webp'
+import coinETH from '@assets/images/bg/coin-ETH.png?as=webp'
+import coinLTC from '@assets/images/bg/coin-LTC-01.png?as=webp'
+import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
 const currenciesData = [
   {

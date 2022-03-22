@@ -17,8 +17,8 @@ import imgADA from '@assets/images/content/cryptos-05.jpg?as=webp'
 import imgDOGE from '@assets/images/content/cryptos-06.jpg?as=webp'
 import ArrowPrev from '@assets/images/svg/ui-arrow-prev.svg'
 import ArrowNext from '@assets/images/svg/ui-arrow-next.svg'
-import coinMN from '@assets/images/decorations/coin-MN.png?as=webp'
-import coinLTC from '@assets/images/decorations/coin-LTC-02.png?as=webp'
+import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
+import coinLTC from '@assets/images/bg/coin-LTC-02.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'Available Cryptos',
