@@ -1,56 +1,70 @@
 // Nav
-import { useState } from 'react'
-import './Nav.scss'
+import { useState, useEffect, useRef } from 'react'
+import useOnClickOutside from '@hooks/useOnClickOutside'
+import MenuOpen from '@assets/images/svg/ui-menu-open.svg'
+import MenuClose from '@assets/images/svg/ui-menu-close.svg'
+
+const navLinks = [
+  { navText: 'How it works', navHref: '#' },
+  { navText: 'Cryptos', navHref: '#' },
+  { navText: 'Features', navHref: '#' },
+  { navText: 'Testimonial', navHref: '#' },
+  { navText: 'University', navHref: '#' },
+]
 
 const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const toggle = () => setIsOpen(!isOpen)
-  const hide = () => setIsOpen(false)
-  const show = () => setIsOpen(true)
+  const [navIsOpen, setNavOpen] = useState(false)
+  const navRef = useRef()
+  useOnClickOutside(navRef, () => setNavOpen(false))
 
-  const navSvg = [
-    {
-      d: 'M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058',
-    },
-    { d: 'M 20,50 H 80' },
-    {
-      d: 'M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942',
-    },
-  ]
+  const toggleNav = () => {
+    setNavOpen(!navIsOpen)
+  }
 
-  const navigation = [{ href: '', text: '' }]
+  const collapseNav = () => {
+    setNavOpen(false)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', collapseNav)
+    window.addEventListener('resize', collapseNav)
+
+    return () => {
+      window.removeEventListener('scroll', () => collapseNav)
+      window.removeEventListener('resize', () => collapseNav)
+    }
+  }, [])
 
   return (
-    <nav className="nav">
+    <nav className="flex w-full lg:w-auto lg:mx-auto" ref={navRef} role="navigation">
       <button
-        className={`nav__btn ${isOpen ? 'is-active' : ''}`}
-        title="Navigation Menu"
-        onClick={toggle}
+        type="button"
+        className="relative z-[52] inline-flex items-center ml-auto p-2 text-xl rounded-lg lg:hidden hover:bg-red-500 active:shadow-inner focus:ring-2 focus:ring-red-500/40"
+        onClick={toggleNav}
       >
-        <svg width={40} height={40} viewBox="0 0 100 100">
-          {navSvg.map((navPath) => (
-            <path className="nav__path-line" d={navPath.d} />
-          ))}
-        </svg>
+        {navIsOpen ? <MenuClose /> : <MenuOpen />}
       </button>
 
-      <div className={`nav__body ${isOpen ? 'is-open' : ''}`}>
-        <ul className="nav__links d-f">
-          {navigation.map((nav) => (
-            <li className="nav__item" key={nav.text}>
-              <a
-                className="nav__link"
-                href={nav.href}
-                onClick={toggle}
-                onBlur={hide}
-                onFocus={show}
-              >
-                {nav.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <menu
+        className={`fixed top-0 right-0 w-full bg-cs-primary/95 shadow-md transition-transform ease-in duration-500 lg:static lg:w-auto lg:h-auto lg:shadow-none lg:translate-y-0 ${
+          navIsOpen ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        <div className="container">
+          <ul className="flex flex-col pt-16 pb-8 divide-y divide-white/20 lg:flex-row lg:gap-2 lg:max-w-none lg:p-0 lg:divide-none">
+            {navLinks.map((item, idx) => (
+              <li className="py-4 px-4 lg:px-6 lg:py-0" key={idx}>
+                <a
+                  className="uppercase hover:text-red-500 hover:scale-105 transition ease-in-out duration-150"
+                  href={item.navHref}
+                >
+                  {item.navText}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </menu>
     </nav>
   )
 }
