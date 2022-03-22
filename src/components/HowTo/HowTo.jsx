@@ -1,6 +1,6 @@
 // HowToTrade
 import { Tab } from '@headlessui/react'
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/lazy'
 import Section from '@components/Section/Section'
 import useClassNames from '@hooks/useClassNames/'
 import imgHowTo01 from '@assets/images/content/how-to-01.jpg?as=webp'
@@ -12,7 +12,7 @@ import movHowTo02 from '@assets/videos/how-to-02.mp4'
 import movHowTo03 from '@assets/videos/how-to-03.mp4'
 import movHowTo04 from '@assets/videos/how-to-04.mp4'
 import PlayIcon from '@assets/images/svg/ui-play.svg'
-import CoinETH from '@assets/images/svg/coin-02.svg'
+import coinETH from '@assets/images/decorations/coin-ETH.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'How to Trade With Krypto',
@@ -35,11 +35,11 @@ const HowToTrade = () => {
       paragraph={sectionTextContent.paragraphText}
     >
       <div className="relative z-0">
-        <CoinETH
-          className="absolute -bottom-[11%] -right-[20%] -z-[1] lg:-right-[8%]"
-          width="14.815vh"
-          height="14.815vh"
-        />
+        <div
+          className="absolute -bottom-[11%] -right-[20%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none lg:-right-[8%] "
+          style={{ backgroundImage: `url(${coinETH})` }}
+        ></div>
+
         <Tab.Group>
           <div className="flex flex-col items-center gap-8 sm:flex-row">
             <Tab.Panels className="w-full max-w-[25rem] sm:w-1/2 sm:max-w-none">

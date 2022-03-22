@@ -1,7 +1,5 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./src/**/*.html', './src/**/*.jsx'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./dist/**/*.html', './src/**/*.{js,jsx,ts,tsx,vue}'],
   theme: {
     screens: {
       sm: '640px',
@@ -31,6 +29,5 @@ module.exports = {
       fontFamily: { sans: ['Rubik', 'sans-serif'] },
     },
   },
-  variants: {},
   plugins: [require('@tailwindcss/line-clamp')],
 }

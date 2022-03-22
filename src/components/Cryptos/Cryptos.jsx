@@ -17,8 +17,8 @@ import imgADA from '@assets/images/content/cryptos-05.jpg?as=webp'
 import imgDOGE from '@assets/images/content/cryptos-06.jpg?as=webp'
 import ArrowPrev from '@assets/images/svg/ui-arrow-prev.svg'
 import ArrowNext from '@assets/images/svg/ui-arrow-next.svg'
-import CoinMN from '@assets/images/svg/coin-04.svg'
-import CoinLTC from '@assets/images/svg/coin-05.svg'
+import coinMN from '@assets/images/decorations/coin-MN.png?as=webp'
+import coinLTC from '@assets/images/decorations/coin-LTC-02.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'Available Cryptos',
@@ -106,16 +106,14 @@ const Cryptos = () => {
     >
       <Container variant="mobFluid">
         <div>
-          <CoinMN
-            className="absolute -top-[15%] left-[3%] -z-[1]"
-            width="5.833vh"
-            height="5.833vh"
-          />
-          <CoinLTC
-            className="absolute -bottom-[21.5%] -left-[15%] sm:left-[0.5%] -z-[1]"
-            width="14.815vh"
-            height="14.815vh"
-          />
+          <div
+            className="absolute -top-[15%] left-[3%] -z-[1] w-[5.833vh] h-[5.833vh] bg-contain pointer-events-none"
+            style={{ backgroundImage: `url(${coinMN})` }}
+          ></div>
+          <div
+            className="absolute -bottom-[21.5%] -left-[15%] sm:left-[0.5%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none"
+            style={{ backgroundImage: `url(${coinLTC})` }}
+          ></div>
         </div>
 
         <Swiper

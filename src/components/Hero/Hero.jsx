@@ -8,10 +8,10 @@ import IconBitcoin from '@assets/images/svg/coin-icon-01.svg'
 import IconLitecoin from '@assets/images/svg/coin-icon-02.svg'
 import IconChainlink from '@assets/images/svg/coin-icon-03.svg'
 import IconSiacoin from '@assets/images/svg/coin-icon-04.svg'
-import CoinBTC from '@assets/images/svg/coin-01.svg'
-import CoinETH from '@assets/images/svg/coin-02.svg'
-import CoinLC from '@assets/images/svg/coin-03.svg'
-import CoinMN from '@assets/images/svg/coin-04.svg'
+import coinBTC from '@assets/images/decorations/coin-BTC.png?as=webp'
+import coinETH from '@assets/images/decorations/coin-ETH.png?as=webp'
+import coinLTC from '@assets/images/decorations/coin-LTC-01.png?as=webp'
+import coinMN from '@assets/images/decorations/coin-MN.png?as=webp'
 
 const currenciesData = [
   {
@@ -45,28 +45,23 @@ const Hero = () => {
     >
       <Container>
         <div className="relative z-0 flex flex-col items-center min-h-screen py-16 lg:py-[6.25rem]">
-          <div>
-            <CoinBTC
-              className="absolute top-[20%] -left-[10%] -z-[1] sm:left-0"
-              width="8.796vh"
-              height="8.796vh"
-            />
-            <CoinETH
-              className="absolute -bottom-[7.5%] -left-[16%] -z-[1] sm:-left-[12%] lg:-left-[6%]"
-              width="14.815vh"
-              height="14.815vh"
-            />
-            <CoinLC
-              className="absolute top-[27%] -right-[12%] -z-[1] sm:-right-[5%]"
-              width="12.963vh"
-              height="12.963vh"
-            />
-            <CoinMN
-              className="absolute bottom-[25%] right-0 -z-[1]"
-              width="5.833vh"
-              height="5.833vh"
-            />
-          </div>
+          <div
+            className="absolute top-[20%] -left-[10%] -z-[1] w-[8.796vh] h-[8.796vh] bg-contain pointer-events-none sm:left-0"
+            style={{ backgroundImage: `url(${coinBTC})` }}
+          ></div>
+          <div
+            className="absolute -bottom-[7.5%] -left-[16%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none sm:-left-[12%] lg:-left-[6%]"
+            style={{ backgroundImage: `url(${coinETH})` }}
+          ></div>
+          <div
+            className="absolute top-[27%] -right-[12%] -z-[1] w-[12.963vh] h-[12.963vh] bg-contain sm:-right-[5%] "
+            style={{ backgroundImage: `url(${coinLTC})` }}
+          ></div>
+          <div
+            className="absolute bottom-[25%] right-0 -z-[1] w-[5.833vh] h-[5.833vh] bg-contain"
+            style={{ backgroundImage: `url(${coinMN})` }}
+          ></div>
+
           <h1 className="mb-7 pt-12 text-5xl text-center font-bold md:text-6xl lg:text-8xl ">
             <span className="block">Next Generation</span>{' '}
             <span className="block">Crypto Trading</span>

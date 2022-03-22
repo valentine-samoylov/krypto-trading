@@ -16,9 +16,9 @@ import authorImg03 from '@assets/images/content/author-03.jpg?as=webp'
 import authorImg04 from '@assets/images/content/author-04.jpg?as=webp'
 import authorImg05 from '@assets/images/content/author-05.jpg?as=webp'
 import authorImg06 from '@assets/images/content/author-06.jpg?as=webp'
-import CoinBTC from '@assets/images/svg/coin-01.svg'
-import CoinETH from '@assets/images/svg/coin-02.svg'
-import CoinMN from '@assets/images/svg/coin-04.svg'
+import coinBTC from '@assets/images/decorations/coin-BTC.png?as=webp'
+import coinETH from '@assets/images/decorations/coin-ETH.png?as=webp'
+import coinMN from '@assets/images/decorations/coin-MN.png?as=webp'
 
 const sectionTextContent = {
   headingText: '30 Million Users Worldwide',
@@ -78,22 +78,20 @@ const Testimonials = () => {
     >
       <Container variant="mobFluid">
         <div>
-          <CoinMN
-            className="absolute -top-[35%] -left-[4%] -z-[1] sm:-top-[40%] sm:left-0"
-            width="5.833vh"
-            height="5.833vh"
-          />
-          <CoinBTC
-            className="absolute -bottom-[10%] -left-[9%] -z-[1] md:-bottom-[25%] sm:-left-[4%]"
-            width="8.796vh"
-            height="8.796vh"
-          />
-          <CoinETH
-            className="absolute -bottom-[33%] -right-[18%] -z-[1] sm:-right-[2%]"
-            width="14.815vh"
-            height="14.815vh"
-          />
+          <div
+            className="absolute -top-[35%] -left-[4%] -z-[1] w-[5.833vh] h-[5.833vh] bg-contain pointer-events-none sm:-top-[40%] sm:left-0"
+            style={{ backgroundImage: `url(${coinMN})` }}
+          ></div>
+          <div
+            className="absolute -bottom-[10%] -left-[9%] -z-[1] w-[8.796vh] h-[8.796vh] bg-contain pointer-events-none sm:-left-[4%] md:-bottom-[25%]"
+            style={{ backgroundImage: `url(${coinBTC})` }}
+          ></div>
+          <div
+            className="absolute -bottom-[33%] -right-[18%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none sm:-right-[2%]"
+            style={{ backgroundImage: `url(${coinETH})` }}
+          ></div>
         </div>
+
         <Swiper
           modules={[Navigation, Mousewheel]}
           spaceBetween={32}

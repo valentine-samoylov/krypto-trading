@@ -7,7 +7,7 @@ import IconSecurity from '@assets/images/svg/features-icon-03.svg'
 import IconWithdraw from '@assets/images/svg/features-icon-04.svg'
 import IconMonthly from '@assets/images/svg/features-icon-05.svg'
 import IconSupport from '@assets/images/svg/features-icon-06.svg'
-import CoinBTC from '@assets/images/svg/coin-01.svg'
+import coinBTC from '@assets/images/decorations/coin-BTC.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'Attractive Features',
@@ -56,11 +56,10 @@ const Features = () => {
       paragraph={sectionTextContent.paragraphText}
     >
       <div className="relative z-0">
-        <CoinBTC
-          className="absolute -top-[18%] -right-[15%] sm:-right-[6%] -z-[1] sm:-top-[25%] lg:-top-[40%]"
-          width="8.796vh"
-          height="8.796vh"
-        />
+        <div
+          className="absolute -top-[18%] -right-[15%] sm:-right-[6%] -z-[1] w-[8.796vh] h-[8.796vh] bg-contain pointer-events-none sm:-top-[25%] lg:-top-[40%]"
+          style={{ backgroundImage: `url(${coinBTC})` }}
+        ></div>
 
         <div className="grid gap-8 justify-center sm:grid-cols-2 xl:grid-cols-3 ">
           {featuresContent.map((item, idx) => (

@@ -6,7 +6,7 @@ import articleImg01 from '@assets/images/content/blogs-01.jpg?as=webp'
 import articleImg02 from '@assets/images/content/blogs-02.jpg?as=webp'
 import articleImg03 from '@assets/images/content/blogs-03.jpg?as=webp'
 import articleImg04 from '@assets/images/content/blogs-04.jpg?as=webp'
-import CoinMN from '@assets/images/svg/coin-04.svg'
+import coinMN from '@assets/images/decorations/coin-MN.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'Crypto Market Analysis',
@@ -49,11 +49,11 @@ const Blogs = () => {
       id="blogsSection"
     >
       <div className="relative z-0">
-        <CoinMN
-          className="absolute -bottom-[11%] -right-[13%] -z-[1] sm:-bottom-[19%] sm:-right-[6.5%]"
-          width="8.333vh"
-          height="8.333vh"
-        />
+        <div
+          className="absolute -bottom-[11%] -right-[13%] -z-[1] w-[8.333vh] h-[8.333vh] bg-contain pointer-events-none sm:-bottom-[19%] sm:-right-[6.5%]"
+          style={{ backgroundImage: `url(${coinMN})` }}
+        ></div>
+
         <div className="grid gap-8 mb-12 md:grid-cols-2">
           {articlesContent.map((item, idx) => (
             <BlogCard item={item} key={idx} />
