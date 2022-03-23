@@ -34,7 +34,7 @@ const Header = () => {
       ref={headerRef}
     >
       <div className="container">
-        <div className="flex items-center mx-auto">
+        <div className="flex items-center mx-auto lg:pr-[5.188rem]">
           <BrandLink />
           <Nav />
         </div>

@@ -51,6 +51,7 @@ module.exports = merge(common, {
     minimize: true,
     minimizer: [
       new TerserPlugin({
+        test: /\.js(\?.*)?$/i,
         parallel: true,
         terserOptions: {
           format: {
@@ -119,7 +120,9 @@ module.exports = merge(common, {
 
   performance: {
     hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
+    // maxEntrypointSize: 512000,
+    // maxAssetSize: 512000,
+    maxEntrypointSize: 307200,
+    maxAssetSize: 307200,
   },
 })

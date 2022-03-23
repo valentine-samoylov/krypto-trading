@@ -1,10 +1,8 @@
 // Cryptos
 import { useState, useEffect, useRef } from 'react'
-import { Navigation, Mousewheel } from 'swiper'
+import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/mousewheel'
+import 'swiper/scss'
 import axios from 'axios'
 import Section from '@components/Section/Section'
 import Container from '@components/Container/Container'
@@ -117,7 +115,7 @@ const Cryptos = () => {
         </div>
 
         <Swiper
-          modules={[Navigation, Mousewheel]}
+          modules={[Navigation]}
           spaceBetween={32}
           slidesPerView={'auto'}
           centeredSlides="true"

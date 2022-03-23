@@ -1,10 +1,8 @@
 // Testimonials
 import { useRef } from 'react'
-import { Navigation, Mousewheel } from 'swiper'
+import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/mousewheel'
+import 'swiper/scss'
 import Section from '@components/Section/Section'
 import Container from '@components/Container/Container'
 import TestimonialCard from '@components/TestimonialCard/TestimonialCard'
@@ -49,7 +47,7 @@ const Testimonials = () => {
         </div>
 
         <Swiper
-          modules={[Navigation, Mousewheel]}
+          modules={[Navigation]}
           spaceBetween={32}
           slidesPerView={'auto'}
           centeredSlides="true"
