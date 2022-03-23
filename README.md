@@ -13,9 +13,11 @@
 - Minification of HTML/CSS/JS files (**Prod mode**)
 - Optimization of images with Squoosh (**Prod mode**)
   - Images can be converted to WEBP format (**Prod mode**)
-- SVGR converts SVG into React components and inserts them as inline SVG into HTML.
+- SVGR converts SVG into React components and inserts them as inline SVG into HTML
 - ESlint and Stylelint
 - Prettier
+- Webpack Bundle Analyzer (**Prod mode**)
+  - An HTML report file will be created in the **reports** folder.
 
 ## Scripts
 

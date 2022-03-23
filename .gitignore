@@ -44,6 +44,7 @@ yarn.lock
 node_modules/
 .yarn/*
 dist/
+reports/
 
 #Log files
 *.log*

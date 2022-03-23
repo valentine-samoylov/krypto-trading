@@ -1,5 +1,5 @@
 // VideoPlayer
-import ReactPlayer from 'react-player/lazy'
+import ReactPlayer from 'react-player/file'
 import PlayIcon from '@assets/images/svg/ui-play.svg'
 
 const VideoPlayer = (props) => {

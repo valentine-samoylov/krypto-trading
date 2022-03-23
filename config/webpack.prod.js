@@ -1,3 +1,4 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
@@ -35,6 +36,11 @@ module.exports = merge(common, {
   },
 
   plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      reportFilename: '../reports/report.html',
+      openAnalyzer: false,
+    }),
     new MiniCssExtractPlugin({
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
