@@ -63,8 +63,7 @@ const Hero = () => {
           ></div>
 
           <h1 className="mb-7 pt-12 text-5xl text-center font-bold md:text-6xl lg:text-8xl ">
-            <span className="block">Next Generation</span>{' '}
-            <span className="block">Crypto Trading</span>
+            Next Generation <br /> Crypto Trading
           </h1>
           <p className="mb-6 text-lg">Crypto Market Starts in</p>
 
