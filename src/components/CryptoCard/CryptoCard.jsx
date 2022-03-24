@@ -5,7 +5,7 @@ const CryptoCard = (props) => {
   const price = props.item.cryptoPrice
 
   return (
-    <>
+    <article className="h-auto rounded-xl overflow-hidden">
       <div className="ol-blend-overlay">
         <img
           className="aspect-4/3 w-full max-h-auto object-cover lg:aspect-square"
@@ -26,7 +26,7 @@ const CryptoCard = (props) => {
           </ButtonLink>
         </div>
       </div>
-    </>
+    </article>
   )
 }
 export default CryptoCard

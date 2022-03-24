@@ -123,8 +123,8 @@ const Cryptos = () => {
           modules={[Navigation]}
           spaceBetween={32}
           slidesPerView={'auto'}
-          centeredSlides="true"
-          loop="true"
+          centeredSlides={true}
+          loop={true}
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
@@ -145,10 +145,7 @@ const Cryptos = () => {
           }}
         >
           {cryptosContent.map((item, idx) => (
-            <SwiperSlide
-              className="max-w-[18rem] h-auto rounded-xl overflow-hidden md:max-w-[20rem] lg:max-w-none "
-              key={idx}
-            >
+            <SwiperSlide className="max-w-[18rem] md:max-w-[20rem] lg:max-w-none" key={idx}>
               <CryptoCard item={item} />
             </SwiperSlide>
           ))}

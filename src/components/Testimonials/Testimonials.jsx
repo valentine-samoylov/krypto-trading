@@ -23,6 +23,7 @@ const Testimonials = () => {
   const mnPlx = useParallax({ speed: 5 })
   const btcPlx = useParallax({ speed: 10 })
   const ethPlx = useParallax({ speed: -10 })
+
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
 
@@ -57,8 +58,8 @@ const Testimonials = () => {
           modules={[Navigation]}
           spaceBetween={32}
           slidesPerView={'auto'}
-          centeredSlides="true"
-          loop="true"
+          centeredSlides={true}
+          loop={true}
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
@@ -80,7 +81,7 @@ const Testimonials = () => {
         >
           {testimonialsContent.map((item, idx) => (
             <SwiperSlide
-              className="slide-shadow flex flex-col items-center max-w-[18rem] px-9 py-16 rounded-xl border-2 border-red-500 text-center overflow-hidden md:max-w-[20rem] lg:max-w-none"
+              className="max-w-[18rem] slide-shadow md:max-w-[20rem] lg:max-w-none"
               key={idx}
             >
               <TestimonialCard item={item} />
