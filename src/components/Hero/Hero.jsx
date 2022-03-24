@@ -83,7 +83,7 @@ const Hero = () => {
             {currenciesData.map((item, idx) => (
               <li key={idx}>
                 <a
-                  className="flex items-center text-xl transition ease-in-out duration-300 hover:text-red-500 hover:scale-105"
+                  className="flex items-center text-xl transition ease-in-out lg:duration-300 lg:hover:text-red-500"
                   href={item.currencyLink}
                 >
                   {item.currencyIcon}

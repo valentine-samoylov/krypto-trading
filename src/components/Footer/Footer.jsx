@@ -49,10 +49,15 @@ const Footer = () => {
 
             <div className="md:min-w-[10rem]">
               <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Links</h3>
-              <ul className="text-lg">
+              <ul className="space-y-4 text-lg">
                 {anchorLinks.map((item, idx) => (
-                  <li className="mb-4 last:m-0" key={idx}>
-                    <a href={item.href}>{item.linkText}</a>
+                  <li key={idx}>
+                    <a
+                      className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
+                      href={item.href}
+                    >
+                      {item.linkText}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -60,10 +65,15 @@ const Footer = () => {
 
             <div className="md:min-w-[10rem]">
               <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Legal</h3>
-              <ul className="text-lg">
+              <ul className="space-y-4 text-lg">
                 {legalLinks.map((item, idx) => (
-                  <li className="mb-4 last:m-0" key={idx}>
-                    <a href={item.href}>{item.linkText}</a>
+                  <li key={idx}>
+                    <a
+                      className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
+                      href={item.href}
+                    >
+                      {item.linkText}
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -79,12 +89,12 @@ const Footer = () => {
               <form action="#">
                 <div className="relative flex flex-col mb-3 md:min-w-[22rem]">
                   <input
-                    className="w-full pr-32 pl-6 py-4 rounded-[3.125rem] bg-white text-lg text-neutral-400 transition ease-in-out duration-300 focus:shadow-focus-sm placeholder:text-neutral-200 sm:pr-28"
+                    className="w-full pr-32 pl-6 py-4 rounded-[3.125rem] bg-white text-lg text-neutral-400 transition-all focus:outline-none focus:ring-4 focus:ring-red-500/40 placeholder:text-neutral-200 sm:pr-28"
                     type="email"
                     placeholder="Enter your email"
                   />
                   <input
-                    className="absolute block top-2/4 right-3 p-3 rounded-[2.5rem] border-0 bg-red-500 text-sm font-medium uppercase -translate-y-1/2"
+                    className="absolute block top-2/4 right-3 p-3 rounded-[2.5rem] border-0 bg-red-500 text-sm font-medium uppercase whitespace-nowrap -translate-y-1/2 cursor-pointer transition lg:hover:scale-105 lg:active:shadow-inner lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-red-500/40  lg:will-change-transform"
                     type="submit"
                     value="Subscribe"
                   />
@@ -100,7 +110,7 @@ const Footer = () => {
                 {creditsLinks.map((item, idx) => (
                   <li key={idx}>
                     <a
-                      className="transition ease-in-out duration-300 hover:text-red-500 hover:scale-105"
+                      className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
                       href={item.href}
                     >
                       {item.linkText}
@@ -115,7 +125,7 @@ const Footer = () => {
                 {socialLinks.map((item, idx) => (
                   <li key={idx}>
                     <a
-                      className="text-2xl sm:text-xs hover:text-red-500 hover:scale-105 transition ease-in-out duration-300"
+                      className="text-2xl sm:text-xs transition-colors ease-in-out duration-300 lg:hover:text-red-500"
                       href={item.href}
                     >
                       {item.icon}

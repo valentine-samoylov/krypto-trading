@@ -151,6 +151,7 @@ svg {
     font-size: 1rem;
     color: #160e33;
     transform: translateY(-50%);
+    will-change: inherit;
     counter-increment: li;
     content: '0' counter(li);
   }
@@ -172,6 +173,6 @@ div.react-player__preview {
 }
 
 .slide-shadow.swiper-slide-active {
-  box-shadow: 0px 0px 40px rgba(#ef4444, 0.4);
-  transition: box-shadow 0.5s ease-in;
+  box-shadow: 0 0 2.5rem rgba(#ef4444, 0.4);
+  transition: all 0.3s ease-in;
 }

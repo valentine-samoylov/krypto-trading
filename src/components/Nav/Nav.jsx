@@ -39,14 +39,16 @@ const Nav = () => {
     <nav className="flex w-full lg:w-auto lg:mx-auto" ref={navRef} role="navigation">
       <button
         type="button"
-        className="relative z-[52] inline-flex items-center ml-auto p-2 text-xl rounded-lg lg:hidden hover:bg-red-500 active:shadow-inner focus:ring-2 focus:ring-red-500/40"
+        className={`relative z-[52] inline-flex items-center ml-auto p-2 text-xl ${
+          navIsOpen ? 'bg-red-500' : ''
+        } rounded-lg ring-2 ring-red-500 transition-colors lg:hidden`}
         onClick={toggleNav}
       >
         {navIsOpen ? <MenuClose /> : <MenuOpen />}
       </button>
 
       <menu
-        className={`fixed top-0 right-0 w-full bg-cs-primary rounded-b-xl shadow-md transition-transform ease-in duration-500 lg:static lg:w-auto lg:h-auto lg:rounded-none lg:shadow-none lg:translate-y-0 ${
+        className={`fixed top-0 right-0 w-full bg-cs-primary rounded-b-xl shadow-md will-change-transform transition-transform duration-500 lg:static lg:w-auto lg:h-auto lg:rounded-none lg:shadow-none lg:translate-y-0 ${
           navIsOpen ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
@@ -55,7 +57,7 @@ const Nav = () => {
             {navLinks.map((item, idx) => (
               <li className="py-4 px-4 lg:px-6 lg:py-0" key={idx}>
                 <a
-                  className="uppercase hover:text-red-500 hover:scale-105 transition ease-in-out duration-150"
+                  className="uppercase transition-colors lg:hover:text-red-500"
                   href={item.navHref}
                 >
                   {item.navText}

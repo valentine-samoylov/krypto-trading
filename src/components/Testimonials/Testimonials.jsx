@@ -82,13 +82,13 @@ const Testimonials = () => {
         </Swiper>
         <div>
           <button
-            className="absolute top-[50%] left-8 z-20 hidden justify-center items-center w-16 h-16 rounded-full bg-red-500/20 text-2xl -translate-y-[50%] transition ease-in-out duration-300 hover:scale-105 active:bg-red-600/20 focus:outline-none focus:ring-2 focus:ring-red-500/40 disabled:opacity-60 lg:flex"
+            className="absolute top-[50%] left-8 z-20 hidden justify-center items-center w-16 h-16 rounded-full bg-red-500/20 text-2xl -translate-y-[50%] transition will-change-transform lg:flex lg:hover:scale-105 lg:active:bg-red-600/20 lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-red-500/40 lg:disabled:opacity-60"
             ref={navigationPrevRef}
           >
             <ArrowPrev />
           </button>
           <button
-            className="absolute top-[50%] right-8 z-20 hidden justify-center items-center w-16 h-16 rounded-full bg-red-500/20 text-2xl -translate-y-[50%] transition ease-in-out duration-300 hover:scale-105 active:bg-red-600/20 focus:outline-none focus:ring-2 focus:ring-red-500/40 disabled:opacity-60 lg:flex"
+            className="absolute top-[50%] right-8 z-20 hidden justify-center items-center w-16 h-16 rounded-full bg-red-500/20 text-2xl -translate-y-[50%] transition will-change-transform lg:flex lg:hover:scale-105 lg:active:bg-red-600/20 lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-red-500/40 lg:disabled:opacity-60"
             ref={navigationNextRef}
           >
             <ArrowNext />

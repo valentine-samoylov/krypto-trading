@@ -30,7 +30,7 @@ const Downloads = () => {
         <Heading>Most advanced crypto trading platform ever!</Heading>
         <div className="flex flex-col justify-center items-center gap-6 py-5 sm:flex-row sm:gap-8">
           {downloadLinksData.map((item, idx) => (
-            <ButtonLink kind="download" key={idx}>
+            <ButtonLink kind="download" shadow="xl" key={idx}>
               {item.btnLogo}
             </ButtonLink>
           ))}
