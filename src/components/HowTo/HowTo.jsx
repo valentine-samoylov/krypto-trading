@@ -34,7 +34,7 @@ const HowToTrade = () => {
             <Tab.Panels className="w-full max-w-[25rem] sm:w-1/2 sm:max-w-none">
               {howToContent.map((item, idx) => (
                 <Tab.Panel key={idx}>
-                  <VideoPlayer item={item} />
+                  <VideoPlayer data={item} />
                 </Tab.Panel>
               ))}
             </Tab.Panels>

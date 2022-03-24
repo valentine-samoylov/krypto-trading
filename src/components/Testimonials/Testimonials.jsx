@@ -84,7 +84,7 @@ const Testimonials = () => {
               className="max-w-[18rem] slide-shadow md:max-w-[20rem] lg:max-w-none"
               key={idx}
             >
-              <TestimonialCard item={item} />
+              <TestimonialCard data={item} />
             </SwiperSlide>
           ))}
         </Swiper>

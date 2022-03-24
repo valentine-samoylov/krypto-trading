@@ -1,10 +1,10 @@
 // Cryptos
 import { useState, useEffect, useRef } from 'react'
 import { useParallax } from 'react-scroll-parallax'
+import axios from 'axios'
 import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss'
-import axios from 'axios'
 import Section from '@components/Section/Section'
 import Container from '@components/Container/Container'
 import CryptoCard from '@components/CryptoCard/CryptoCard'
@@ -34,11 +34,11 @@ const endpoints = [
 ]
 
 const Cryptos = () => {
-  const navigationPrevRef = useRef(null)
-  const navigationNextRef = useRef(null)
   const [coinData, setCoinsPrices] = useState([])
   const mnPlx = useParallax({ speed: 10 })
   const ltcPlx = useParallax({ translateX: [-100, 100], rotate: [0, 360] })
+  const navigationPrevRef = useRef(null)
+  const navigationNextRef = useRef(null)
 
   const getCoinPrices = () => {
     Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(
@@ -146,7 +146,7 @@ const Cryptos = () => {
         >
           {cryptosContent.map((item, idx) => (
             <SwiperSlide className="max-w-[18rem] md:max-w-[20rem] lg:max-w-none" key={idx}>
-              <CryptoCard item={item} />
+              <CryptoCard data={item} />
             </SwiperSlide>
           ))}
         </Swiper>

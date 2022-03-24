@@ -1,15 +1,16 @@
 // Button
 import { buttonProps } from './buttonProps'
 
-const ButtonLink = ({ kind, variant, shadow, ...props }) => {
+const Button = (props) => {
   return (
-    <button
-      className={`${buttonProps.kind[kind]} ${buttonProps.variant[variant || '']} ${
-        buttonProps.shadow[shadow || '']
+    <a
+      className={`${buttonProps.kind[props.kind]} ${buttonProps.variant[props.variant || '']} ${
+        buttonProps.shadow[props.shadow || '']
       } ${buttonProps.general} ${buttonProps.transitions}`}
+      href={props.href || '#'}
       {...props}
-    ></button>
+    ></a>
   )
 }
 
-export default ButtonLink
+export default Button

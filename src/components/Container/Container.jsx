@@ -7,8 +7,8 @@ const containerProps = {
   },
 }
 
-const Container = ({ variant, children }) => {
-  return <div className={`${containerProps.variant[variant]}`}>{children}</div>
+const Container = (props) => {
+  return <div className={`${containerProps.variant[props.variant]}`}>{props.children}</div>
 }
 
 Container.defaultProps = {

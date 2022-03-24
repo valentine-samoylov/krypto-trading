@@ -29,7 +29,7 @@ const Features = () => {
 
         <div className="grid gap-8 justify-center sm:grid-cols-2 xl:grid-cols-3 ">
           {featuresContent.map((item, idx) => (
-            <FeatureCard item={item} key={idx} />
+            <FeatureCard data={item} key={idx} />
           ))}
         </div>
       </div>

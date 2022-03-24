@@ -2,7 +2,7 @@
 import { useParallax } from 'react-scroll-parallax'
 import Container from '@components/Container/Container'
 import Countdown from '@components/Countdown/Countdown'
-import ButtonLink from '@components/Button/ButtonLink'
+import Button from '@components/Button/Button'
 import bgImage from '@assets/images/bg/hero-bg.jpg?as=webp'
 import IconBitcoin from '@assets/images/svg/coin-icon-01.svg'
 import IconLitecoin from '@assets/images/svg/coin-icon-02.svg'
@@ -79,12 +79,12 @@ const Hero = () => {
           <Countdown />
 
           <div className="flex flex-col gap-6 mb-10 sm:flex-row sm:gap-8">
-            <ButtonLink kind="primary" variant="lg" shadow="xl" href="#downloadsSection">
+            <Button kind="primary" variant="lg" shadow="xl" href="#downloadsSection">
               Download App
-            </ButtonLink>
-            <ButtonLink kind="secondary" variant="lg" shadow="xl">
+            </Button>
+            <Button kind="secondary" variant="lg" shadow="xl">
               Trade Crypto
-            </ButtonLink>
+            </Button>
           </div>
 
           <p className="mb-6 text-lg font-medium uppercase">We accept</p>

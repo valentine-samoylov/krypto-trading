@@ -2,7 +2,7 @@
 import { useParallax } from 'react-scroll-parallax'
 import Section from '@components/Section/Section'
 import BlogCard from '@components/BlogCard/BlogCard'
-import ButtonLink from '@components/Button/ButtonLink'
+import Button from '@components/Button/Button'
 import { blogsContent } from './blogsContent'
 import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
@@ -30,13 +30,13 @@ const Blogs = () => {
 
         <div className="grid gap-8 mb-12 md:grid-cols-2">
           {blogsContent.map((item, idx) => (
-            <BlogCard item={item} key={idx} />
+            <BlogCard data={item} key={idx} />
           ))}
         </div>
         <div className="flex justify-center">
-          <ButtonLink kind="secondary" variant="lg">
+          <Button kind="secondary" variant="lg">
             Enroll crypto University
-          </ButtonLink>
+          </Button>
         </div>
       </div>
     </Section>

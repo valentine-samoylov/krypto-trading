@@ -1,7 +1,7 @@
 // Downloads
 import Container from '@components/Container/Container'
 import Heading from '@components/Heading/Heading'
-import ButtonLink from '@components/Button/ButtonLink'
+import Button from '@components/Button/Button'
 import bgImage from '@assets/images/bg/downloads-bg.jpg?as=webp'
 import BadgeGooglePlay from '@assets/images/svg/badge-google-play.svg'
 import BadgeAppStore from '@assets/images/svg/badge-app-store.svg'
@@ -30,9 +30,9 @@ const Downloads = () => {
         <Heading>Most advanced crypto trading platform ever!</Heading>
         <div className="flex flex-col justify-center items-center gap-6 py-5 sm:flex-row sm:gap-8">
           {downloadLinksData.map((item, idx) => (
-            <ButtonLink kind="download" shadow="xl" key={idx}>
+            <Button kind="download" shadow="xl" key={idx}>
               {item.btnLogo}
-            </ButtonLink>
+            </Button>
           ))}
         </div>
       </Container>
