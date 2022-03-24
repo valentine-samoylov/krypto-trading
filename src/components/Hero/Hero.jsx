@@ -1,5 +1,5 @@
 // Hero
-import React from 'react'
+import { useParallax } from 'react-scroll-parallax'
 import Container from '@components/Container/Container'
 import Countdown from '@components/Countdown/Countdown'
 import ButtonLink from '@components/Button/ButtonLink'
@@ -37,6 +37,11 @@ const currenciesData = [
 ]
 
 const Hero = () => {
+  const btcPlx = useParallax({ speed: 10 })
+  const ethPlx = useParallax({ speed: -10 })
+  const ltcPlx = useParallax({ speed: -15 })
+  const mnPlx = useParallax({ speed: 15 })
+
   return (
     <section
       className="relative bg-center bg-no-repeat bg-cover ol-double-gradient"
@@ -44,22 +49,26 @@ const Hero = () => {
       id="heroSection"
     >
       <Container>
-        <div className="relative z-0 flex flex-col items-center min-h-screen py-16 lg:py-[6.25rem]">
+        <div className="relative z-0 flex flex-col items-center min-h-screen py-16 lg:pt-28 xl:pt-[6.667vw]">
           <div
-            className="absolute top-[20%] -left-[10%] -z-[1] w-[8.796vh] h-[8.796vh] bg-contain pointer-events-none sm:left-0"
+            className="absolute top-1/3 -left-[10%] -z-[1] w-[8.796vh] h-[8.796vh] bg-contain pointer-events-none sm:left-0"
             style={{ backgroundImage: `url(${coinBTC})` }}
+            ref={btcPlx.ref}
           ></div>
           <div
-            className="absolute -bottom-[7.5%] -left-[16%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none sm:-left-[12%] lg:-left-[6%]"
+            className="absolute -bottom-[18%] -left-[16%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none sm:-left-[12%] lg:-left-[6%]"
             style={{ backgroundImage: `url(${coinETH})` }}
+            ref={ethPlx.ref}
           ></div>
           <div
-            className="absolute top-[27%] -right-[12%] -z-[1] w-[12.963vh] h-[12.963vh] bg-contain sm:-right-[5%] "
+            className="absolute top-1/4 -right-[12%] -z-[1] w-[12.963vh] h-[12.963vh] bg-contain sm:-right-[5%] "
             style={{ backgroundImage: `url(${coinLTC})` }}
+            ref={ltcPlx.ref}
           ></div>
           <div
-            className="absolute bottom-[25%] right-0 -z-[1] w-[5.833vh] h-[5.833vh] bg-contain"
+            className="absolute bottom-[12%] right-0 -z-[1] w-[5.833vh] h-[5.833vh] bg-contain"
             style={{ backgroundImage: `url(${coinMN})` }}
+            ref={mnPlx.ref}
           ></div>
 
           <h1 className="mb-7 pt-12 text-5xl text-center font-bold md:text-6xl lg:text-8xl ">

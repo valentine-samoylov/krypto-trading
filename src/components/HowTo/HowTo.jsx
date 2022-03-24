@@ -1,4 +1,5 @@
 // HowToTrade
+import { useParallax } from 'react-scroll-parallax'
 import { Tab } from '@headlessui/react'
 import useClassNames from '@hooks/useClassNames/'
 import Section from '@components/Section/Section'
@@ -12,6 +13,8 @@ const sectionTextContent = {
 }
 
 const HowToTrade = () => {
+  const ethPlx = useParallax({ speed: -10 })
+
   return (
     <Section
       className="pb-8"
@@ -23,6 +26,7 @@ const HowToTrade = () => {
         <div
           className="absolute -bottom-[11%] -right-[20%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none lg:-right-[8%] "
           style={{ backgroundImage: `url(${coinETH})` }}
+          ref={ethPlx.ref}
         ></div>
 
         <Tab.Group vertical>

@@ -1,4 +1,5 @@
 // Blogs
+import { useParallax } from 'react-scroll-parallax'
 import Section from '@components/Section/Section'
 import BlogCard from '@components/BlogCard/BlogCard'
 import ButtonLink from '@components/Button/ButtonLink'
@@ -11,6 +12,8 @@ const sectionTextContent = {
 }
 
 const Blogs = () => {
+  const mnPlx = useParallax({ speed: 10 })
+
   return (
     <Section
       className="pb-14 md:pb-16 lg:pb-20"
@@ -22,6 +25,7 @@ const Blogs = () => {
         <div
           className="absolute -bottom-[11%] -right-[13%] -z-[1] w-[8.333vh] h-[8.333vh] bg-contain pointer-events-none sm:-bottom-[19%] sm:-right-[6.5%]"
           style={{ backgroundImage: `url(${coinMN})` }}
+          ref={mnPlx.ref}
         ></div>
 
         <div className="grid gap-8 mb-12 md:grid-cols-2">

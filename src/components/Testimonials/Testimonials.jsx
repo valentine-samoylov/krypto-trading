@@ -1,7 +1,8 @@
 // Testimonials
 import { useRef } from 'react'
-import { Navigation } from 'swiper'
+import { useParallax } from 'react-scroll-parallax'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
 import 'swiper/scss'
 import Section from '@components/Section/Section'
 import Container from '@components/Container/Container'
@@ -19,6 +20,9 @@ const sectionTextContent = {
 }
 
 const Testimonials = () => {
+  const mnPlx = useParallax({ speed: 5 })
+  const btcPlx = useParallax({ speed: 10 })
+  const ethPlx = useParallax({ speed: -10 })
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
 
@@ -33,16 +37,19 @@ const Testimonials = () => {
       <Container variant="mobFluid">
         <div>
           <div
-            className="absolute -top-[35%] -left-[4%] -z-[1] w-[5.833vh] h-[5.833vh] bg-contain pointer-events-none sm:-top-[40%] sm:left-0"
+            className="absolute top-0 -left-[4%] -z-[1] w-[5.833vh] h-[5.833vh] bg-contain pointer-events-none sm:-top-[40%] sm:left-0"
             style={{ backgroundImage: `url(${coinMN})` }}
+            ref={mnPlx.ref}
           ></div>
           <div
             className="absolute -bottom-[10%] -left-[9%] -z-[1] w-[8.796vh] h-[8.796vh] bg-contain pointer-events-none sm:-left-[4%] md:-bottom-[25%]"
             style={{ backgroundImage: `url(${coinBTC})` }}
+            ref={btcPlx.ref}
           ></div>
           <div
             className="absolute -bottom-[33%] -right-[18%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none sm:-right-[2%]"
             style={{ backgroundImage: `url(${coinETH})` }}
+            ref={ethPlx.ref}
           ></div>
         </div>
 
@@ -51,7 +58,7 @@ const Testimonials = () => {
           spaceBetween={32}
           slidesPerView={'auto'}
           centeredSlides="true"
-          loop={true}
+          loop="true"
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
@@ -73,7 +80,7 @@ const Testimonials = () => {
         >
           {testimonialsContent.map((item, idx) => (
             <SwiperSlide
-              className="slide-shadow flex flex-col items-center max-w-[18rem] py-16 rounded-xl border-2 border-red-500 text-center overflow-hidden md:max-w-[20rem] lg:max-w-none px-9"
+              className="slide-shadow flex flex-col items-center max-w-[18rem] px-9 py-16 rounded-xl border-2 border-red-500 text-center overflow-hidden md:max-w-[20rem] lg:max-w-none"
               key={idx}
             >
               <TestimonialCard item={item} />

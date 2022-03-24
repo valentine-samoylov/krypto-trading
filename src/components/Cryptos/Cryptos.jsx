@@ -1,5 +1,6 @@
 // Cryptos
 import { useState, useEffect, useRef } from 'react'
+import { useParallax } from 'react-scroll-parallax'
 import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss'
@@ -36,6 +37,8 @@ const Cryptos = () => {
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
   const [coinData, setCoinsPrices] = useState([])
+  const mnPlx = useParallax({ speed: 10 })
+  const ltcPlx = useParallax({ translateX: [-100, 100], rotate: [0, 360] })
 
   const getCoinPrices = () => {
     Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(
@@ -107,10 +110,12 @@ const Cryptos = () => {
           <div
             className="absolute -top-[15%] left-[3%] -z-[1] w-[5.833vh] h-[5.833vh] bg-contain pointer-events-none"
             style={{ backgroundImage: `url(${coinMN})` }}
+            ref={mnPlx.ref}
           ></div>
           <div
-            className="absolute -bottom-[21.5%] -left-[15%] sm:left-[0.5%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none"
+            className="absolute -bottom-[14%] -left-[15%] sm:left-[0.5%] -z-[1] w-[14.815vh] h-[14.815vh] bg-contain pointer-events-none sm:-bottom-[17%] lg:-bottom-[21.5%]"
             style={{ backgroundImage: `url(${coinLTC})` }}
+            ref={ltcPlx.ref}
           ></div>
         </div>
 
@@ -119,7 +124,7 @@ const Cryptos = () => {
           spaceBetween={32}
           slidesPerView={'auto'}
           centeredSlides="true"
-          loop={true}
+          loop="true"
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
