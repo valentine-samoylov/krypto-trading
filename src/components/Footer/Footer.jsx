@@ -38,7 +38,7 @@ const Footer = () => {
     <footer className="pt-14 pb-16 bg-cs-primary text-xs text-white md:pt-16 lg:pt-20 md:pb-20 lg:pb-24">
       <Container>
         <div className="divide-y divide-white/20">
-          <div className="flex flex-col items-center flex-wrap gap-8 pb-14 text-center sm:flex-row sm:items-start sm:max-w-none sm:text-left md:pb-16 lg:pb-20 lg:flex-nowrap">
+          <div className="flex flex-col flex-wrap gap-8 pb-14 sm:flex-row sm:items-start sm:max-w-none sm:text-left md:pb-16 lg:pb-20 lg:flex-nowrap">
             <div className="sm:max-w-[16rem]">
               <BrandLink className="mb-5 md:mb-8" />
               <p className="text-lg">
@@ -47,36 +47,38 @@ const Footer = () => {
               </p>
             </div>
 
-            <div className="md:min-w-[10rem]">
-              <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Links</h3>
-              <ul className="space-y-4 text-lg">
-                {anchorLinks.map((item, idx) => (
-                  <li key={idx}>
-                    <a
-                      className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
-                      href={item.href}
-                    >
-                      {item.linkText}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <div className="flex flex-wrap gap-8 sm:flex-nowrap">
+              <div className="md:min-w-[10rem]">
+                <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Links</h3>
+                <ul className="space-y-4 text-lg">
+                  {anchorLinks.map((item, idx) => (
+                    <li key={idx}>
+                      <a
+                        className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
+                        href={item.href}
+                      >
+                        {item.linkText}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <div className="md:min-w-[10rem]">
-              <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Legal</h3>
-              <ul className="space-y-4 text-lg">
-                {legalLinks.map((item, idx) => (
-                  <li key={idx}>
-                    <a
-                      className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
-                      href={item.href}
-                    >
-                      {item.linkText}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <div className="md:min-w-[10rem]">
+                <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Legal</h3>
+                <ul className="space-y-4 text-lg">
+                  {legalLinks.map((item, idx) => (
+                    <li key={idx}>
+                      <a
+                        className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
+                        href={item.href}
+                      >
+                        {item.linkText}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
 
             <div className="lg:ml-auto">

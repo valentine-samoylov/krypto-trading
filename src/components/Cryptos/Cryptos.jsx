@@ -141,6 +141,7 @@ const Cryptos = () => {
           breakpoints={{
             1024: {
               slidesPerView: 3,
+              initialSlide: 1,
             },
           }}
         >
