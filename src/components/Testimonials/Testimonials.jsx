@@ -16,7 +16,7 @@ import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
 const sectionTextContent = {
   headingText: '30 Million Users Worldwide',
-  paragraphText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+  paragraphText: "Still haven't made up your mind? See what our users are saying about us!",
 }
 
 const Testimonials = () => {
@@ -76,6 +76,7 @@ const Testimonials = () => {
           breakpoints={{
             1024: {
               slidesPerView: 3,
+              initialSlide: 1,
             },
           }}
         >

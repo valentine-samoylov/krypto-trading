@@ -57,12 +57,11 @@ a {
 
 button {
   background-color: transparent;
-  border: none;
+  border-color: transparent;
 }
 
 svg {
   fill: currentColor;
-  pointer-events: none;
 }
 
 ::selection {

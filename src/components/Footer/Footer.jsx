@@ -91,12 +91,12 @@ const Footer = () => {
               <form action="#">
                 <div className="relative flex flex-col mb-3 md:min-w-[22rem]">
                   <input
-                    className="w-full pr-32 pl-6 py-4 rounded-[3.125rem] bg-white text-lg text-neutral-400 transition-all focus:outline-none focus:ring-4 focus:ring-red-500/40 placeholder:text-neutral-200 sm:pr-28"
+                    className="w-full pr-32 pl-6 py-4 rounded-[3.125rem] bg-white text-lg text-neutral-400 transition-all focus:outline-none focus:ring-4 focus:ring-red-500/40 placeholder:text-neutral-300"
                     type="email"
                     placeholder="Enter your email"
                   />
                   <input
-                    className="absolute block top-2/4 right-3 p-3 rounded-[2.5rem] border-0 bg-red-500 text-sm font-medium uppercase whitespace-nowrap -translate-y-1/2 cursor-pointer transition lg:hover:scale-105 lg:active:shadow-inner lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-red-500/40  lg:will-change-transform"
+                    className="absolute block top-2/4 right-3 p-3 rounded-[2.5rem] border-0 bg-red-500 text-sm font-medium uppercase whitespace-nowrap -translate-y-1/2 cursor-pointer transition lg:hover:scale-105 lg:active:shadow-inner lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-red-500/40 lg:will-change-transform"
                     type="submit"
                     value="Subscribe"
                   />

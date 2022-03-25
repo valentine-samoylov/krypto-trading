@@ -8,25 +8,25 @@ export const blogsContent = [
   {
     imgSrc: articleImg01,
     title: 'How to trade Bitcoin',
-    text: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    text: 'What is bitcoin? How to choose the best deal? In this article, you will learn everything you need to get started.',
     linkHref: '#',
   },
   {
     imgSrc: articleImg02,
     title: 'Gain the best exchange',
-    text: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    text: 'How to choose the best course? Current interviews with traders and analysts.',
     linkHref: '#',
   },
   {
     imgSrc: articleImg03,
     title: 'Reduce your loosing',
-    text: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    text: 'Learn how to minimize risks and reduce losses in future investments. The best reliable strategies',
     linkHref: '#',
   },
   {
     imgSrc: articleImg04,
     title: 'Win 50-50 trading strategy',
-    text: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    text: 'Futures live in a 50/50 world that requires successful traders to change the odds just a few percentage points in their favor.',
     linkHref: '#',
   },
 ]

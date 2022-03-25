@@ -7,7 +7,8 @@ import coinBTC from '@assets/images/bg/coin-BTC.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'Attractive Features',
-  paragraphText: "Windaful makes playing the UK's best raffles easy and fun.",
+  paragraphText:
+    'Our key features that set the standard in the industry and are so well appreciated by our users.',
 }
 
 const Features = () => {

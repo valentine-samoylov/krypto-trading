@@ -8,37 +8,38 @@ import authorImg06 from '@assets/images/content/author-06.jpg?as=webp'
 
 export const testimonialsContent = [
   {
-    authorText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+    authorText: 'Withdrawal to any account or bank card is very easy in Krypto.',
     authorImgSrc: authorImg01,
     authorName: 'Cameron Williamson',
     authorPos: 'FX Trader',
   },
   {
-    authorText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+    authorText:
+      'I pumped up my investment portfolio in a year, and at that time I started with Krypto.',
     authorImgSrc: authorImg02,
     authorName: 'Bessie Cooper',
     authorPos: 'Stock Manager',
   },
   {
-    authorText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+    authorText: 'Very low transaction fees and a wide range of currencies for investments.',
     authorImgSrc: authorImg03,
     authorName: 'Albert Flores',
     authorPos: 'Crypto Analyst',
   },
   {
-    authorText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+    authorText: 'For last year with Krypto, I have made many trades and received nice bonuses.',
     authorImgSrc: authorImg04,
     authorName: 'Matthew Foster',
     authorPos: 'Crypto Research Analyst',
   },
   {
-    authorText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+    authorText: "With the mobile app, I'm aware of everything that's going on in the market.",
     authorImgSrc: authorImg05,
     authorName: 'Eric Jones',
     authorPos: 'Customer Service Agent',
   },
   {
-    authorText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+    authorText: 'I can see handy analytics and predict my investment strategy accordingly.',
     authorImgSrc: authorImg06,
     authorName: "David O'Gallagher",
     authorPos: 'Research Analyst',

@@ -9,7 +9,7 @@ import coinETH from '@assets/images/bg/coin-ETH.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'How to Trade With Krypto',
-  paragraphText: 'Tincidunt id nibh orci nibh just nulla elementum, sed vel.',
+  paragraphText: 'Becoming a cryptotrader on our platform has never been easier!',
 }
 
 const HowToTrade = () => {

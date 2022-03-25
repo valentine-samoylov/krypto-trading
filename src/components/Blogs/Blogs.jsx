@@ -8,7 +8,7 @@ import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'Crypto Market Analysis',
-  paragraphText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+  paragraphText: 'Stay on top of current trends and improve your skills at the Krypto University!',
 }
 
 const Blogs = () => {

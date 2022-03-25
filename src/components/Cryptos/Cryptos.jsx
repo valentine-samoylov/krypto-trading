@@ -21,7 +21,7 @@ import coinLTC from '@assets/images/bg/coin-LTC-02.png?as=webp'
 
 const sectionTextContent = {
   headingText: 'Available Cryptos',
-  paragraphText: 'Tincidunt id nibh orci nibh justo. Purus et turpis nulla elementum, sed vel.',
+  paragraphText: 'Check out our cryptocurrency offerings and current exchange rates.',
 }
 
 const endpoints = [

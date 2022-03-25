@@ -8,7 +8,7 @@ const CryptoCard = (props) => {
     <article className="h-auto rounded-xl overflow-hidden">
       <div className="ol-blend-overlay">
         <img
-          className="aspect-4/3 w-full max-h-auto object-cover lg:aspect-square"
+          className="aspect-4/3 w-full object-cover lg:aspect-square"
           src={props.data.imgSrc}
           alt={props.data.title}
           loading="lazy"

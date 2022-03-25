@@ -10,31 +10,33 @@ export const featuresContent = [
   {
     featureIcon: <IconContest className="flex-shrink-0" width="4.063rem" height="4.063rem" />,
     featureTitle: 'Weekly Trading Contest',
-    featureDescr: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    featureDescr:
+      'Every week, 5 winners will earn real cash prizes. Trade and win with Krypto platform!',
   },
   {
     featureIcon: <IconCommission className="flex-shrink-0" width="4.063rem" height="4.063rem" />,
     featureTitle: 'Less Commission On Trade',
-    featureDescr: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    featureDescr: 'Millions of Krypto platform users enjoy the lowest commissions in the industry!',
   },
   {
     featureIcon: <IconSecurity className="flex-shrink-0" width="4.063rem" height="4.063rem" />,
-    featureTitle: 'Safe And Secure Trading platform',
-    featureDescr: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    featureTitle: 'Safe and Secure Trading platform',
+    featureDescr: 'We use the latest blockchain technology to protect your transactions.',
   },
   {
     featureIcon: <IconWithdraw className="flex-shrink-0" width="4.063rem" height="4.063rem" />,
     featureTitle: 'Instant Withdraw Process',
-    featureDescr: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    featureDescr: 'You can always withdraw funds from your account quickly and safely.',
   },
   {
     featureIcon: <IconMonthly className="flex-shrink-0" width="4.063rem" height="4.063rem" />,
-    featureTitle: 'Monthly Commition',
-    featureDescr: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    featureTitle: 'Monthly Bonuses and Promotions',
+    featureDescr: 'Our users get nice monthly bonuses and hot promotional offers.',
   },
   {
     featureIcon: <IconSupport className="flex-shrink-0" width="4.063rem" height="4.063rem" />,
     featureTitle: '24/7 Support Team',
-    featureDescr: 'Eu tellus quam id sed ultrices. Integer nunc lectus nisi, erat et ornare risus.',
+    featureDescr:
+      'Any questions or suggestions? You can contact our professionals at any time of the day or night.',
   },
 ]

@@ -26,7 +26,7 @@ module.exports = {
         issuer: /\.[jt]sx?$/,
         use: ['@svgr/webpack'],
       },
-      { test: /\.(woff(2)?|eot|ttf|otf)$/, type: 'asset/inline' },
+      { test: /\.(woff(2)?|eot|ttf|otf)$/, type: 'asset/resource' },
       { test: /\.mp4$/, type: 'asset/resource' },
       { test: /\.txt$/, type: 'asset/source' },
     ],
