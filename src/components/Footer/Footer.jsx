@@ -91,7 +91,7 @@ const Footer = () => {
               <form action="#">
                 <div className="relative flex flex-col mb-3 md:min-w-[22rem]">
                   <input
-                    className="w-full pr-32 pl-6 py-4 rounded-[3.125rem] bg-white text-lg text-neutral-400 transition-all focus:outline-none focus:ring-4 focus:ring-red-500/40 placeholder:text-neutral-300"
+                    className="w-full pr-32 pl-6 py-4 rounded-[3.125rem] bg-white text-lg text-black/60 transition-all focus:outline-none focus:ring-4 focus:ring-red-500/40 placeholder:text-black/20"
                     type="email"
                     placeholder="Enter your email"
                   />

@@ -29,7 +29,7 @@ const LangSwitcher = () => {
               <Listbox.Option
                 className={({ active }) =>
                   `relative flex items-center py-1 pr-2 pl-9 cursor-pointer ${
-                    active ? 'bg-red-100 text-red-400' : 'text-neutral-300'
+                    active ? 'bg-red-100 text-red-400 font-medium' : 'text-black/60'
                   } transition-colors`
                 }
                 key={lang.id}
