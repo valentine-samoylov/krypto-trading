@@ -8,7 +8,9 @@ const FeatureCard = (props) => {
           {props.data.featureTitle}
         </h3>
       </div>
-      <p className="text-xl text-white/60 line-clamp-3 md:text-2xl ">{props.data.featureDescr}</p>
+      <p className="text-xl text-center text-white/60 line-clamp-3 md:text-2xl md:text-left">
+        {props.data.featureDescr}
+      </p>
     </article>
   )
 }

@@ -34,11 +34,13 @@ const endpoints = [
 ]
 
 const Cryptos = () => {
-  const [coinData, setCoinsPrices] = useState([])
   const mnPlx = useParallax({ speed: 10 })
   const ltcPlx = useParallax({ translateX: [-100, 100], rotate: [0, 360] })
+
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
+
+  const [coinData, setCoinsPrices] = useState([])
 
   const getCoinPrices = () => {
     Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(

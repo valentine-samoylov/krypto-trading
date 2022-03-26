@@ -8,9 +8,9 @@ import ArrowDown from '@assets/images/svg/ui-arrow-down.svg'
 import ItemCheck from '@assets/images/svg/ui-check.svg'
 
 const languages = [
-  { id: 1, flag: <US title="English (USA)" />, abbr: 'EN-US' },
-  { id: 2, flag: <GB title="English (GB)" />, abbr: 'EN-GB' },
-  { id: 3, flag: <ES title="Español" />, abbr: 'ES' },
+  { id: 1, flag: <US title="English (USA)" />, abbr: 'EN-US', unavailable: false },
+  { id: 2, flag: <GB title="English (GB)" />, abbr: 'EN-GB', unavailable: true },
+  { id: 3, flag: <ES title="Español" />, abbr: 'ES', unavailable: true },
 ]
 
 const LangSwitcher = () => {

@@ -1,7 +1,7 @@
 // Header
 import { useState, useEffect, useRef } from 'react'
 import Nav from '@components/Nav/Nav'
-import BrandLink from '@components/BrandLink/BrandLink'
+import Logo from '@components/Logo/Logo'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -35,7 +35,7 @@ const Header = () => {
     >
       <div className="container">
         <div className="flex items-center mx-auto">
-          <BrandLink className="flex-shrink-0" />
+          <Logo className="flex-shrink-0" />
           <Nav />
         </div>
       </div>

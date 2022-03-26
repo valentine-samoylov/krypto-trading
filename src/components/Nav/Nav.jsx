@@ -2,16 +2,10 @@
 import { useState, useEffect, useRef } from 'react'
 import useOnClickOutside from '@hooks/useOnClickOutside'
 import LangSwitcher from '@components/LangSwitcher/LangSwitcher'
+import NavLink from '@components/NavLink/NavLink'
+import { navLinks } from './navLinks'
 import MenuOpen from '@assets/images/svg/ui-menu-open.svg'
 import MenuClose from '@assets/images/svg/ui-menu-close.svg'
-
-const navLinks = [
-  { navText: 'How it works', navHref: '#' },
-  { navText: 'Cryptos', navHref: '#' },
-  { navText: 'Features', navHref: '#' },
-  { navText: 'Testimonial', navHref: '#' },
-  { navText: 'University', navHref: '#' },
-]
 
 const Nav = () => {
   const [navIsOpen, setNavOpen] = useState(false)
@@ -59,14 +53,9 @@ const Nav = () => {
       >
         <div className="container">
           <ul className="flex flex-col pt-16 pb-8 divide-y divide-white/20 lg:flex-row lg:gap-2 lg:max-w-none lg:p-0 lg:divide-none">
-            {navLinks.map((item, idx) => (
+            {navLinks.map(({ scrollToId, linkLabel }, idx) => (
               <li className="py-4 px-4 lg:px-6 lg:py-0" key={idx}>
-                <a
-                  className="uppercase transition-colors lg:hover:text-red-500"
-                  href={item.navHref}
-                >
-                  {item.navText}
-                </a>
+                <NavLink scrollToId={scrollToId} linkLabel={linkLabel} />
               </li>
             ))}
           </ul>

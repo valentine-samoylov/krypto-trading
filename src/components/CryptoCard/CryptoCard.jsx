@@ -3,6 +3,7 @@ import Button from '@components/Button/Button'
 
 const CryptoCard = (props) => {
   const price = props.data.cryptoPrice
+  const roundedPrice = Math.round((price + Number.EPSILON) * 100) / 100
 
   return (
     <article className="h-auto rounded-xl overflow-hidden">
@@ -19,7 +20,7 @@ const CryptoCard = (props) => {
         <p className="text-lg text-black/60 line-clamp-3">{props.data.text}</p>
         <div className="flex flex-col justify-between gap-4 mt-auto pt-6 xl:flex-row xl:items-center">
           <span className="text-2xl font-bold text-red-500 sm:text-3xl xl:text-4xl">
-            {price ? `$${price}` : 'loading...'}
+            {roundedPrice ? `$${roundedPrice}` : 'loading...'}
           </span>
           <Button kind="primary" variant="lg">
             Trade now

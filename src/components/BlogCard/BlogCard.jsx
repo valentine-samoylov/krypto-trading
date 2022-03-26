@@ -14,7 +14,7 @@ const BlogCard = (props) => {
         <h3 className="mb-3 text-xl font-medium md:text-2xl">{props.data.title}</h3>
         <p className="text-lg text-white/60 line-clamp-3">{props.data.text}</p>
         <a
-          className="mt-auto text-lg text-red-500 hover:scale-105 transition ease-in-out duration-300"
+          className="mt-auto text-lg text-red-500 transition lg:hover:underline"
           href={props.data.linkHref}
         >
           Learn more

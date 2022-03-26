@@ -1,6 +1,6 @@
 // Footer
 import Container from '@components/Container/Container'
-import BrandLink from '@components/BrandLink/BrandLink'
+import Logo from '@components/Logo/Logo'
 import IconYoutube from '@assets/images/svg/social-youtube.svg'
 import IconLinkedIn from '@assets/images/svg/social-linkedin.svg'
 import IconFacebook from '@assets/images/svg/social-facebook.svg'
@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="divide-y divide-white/20">
           <div className="flex flex-col flex-wrap gap-8 pb-14 sm:flex-row sm:items-start sm:max-w-none sm:text-left md:pb-16 lg:pb-20 lg:flex-nowrap">
             <div className="sm:max-w-[16rem]">
-              <BrandLink className="mb-5 md:mb-8" />
+              <Logo className="mb-5 md:mb-8" />
               <p className="text-lg">
                 Massa blandit semper varius faucibus. Suspendisse viverra venenatis placerat nam ut.
                 Pellentesque sit id tempor turpis.
@@ -54,7 +54,7 @@ const Footer = () => {
                   {anchorLinks.map((item, idx) => (
                     <li key={idx}>
                       <a
-                        className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
+                        className="transition-colors lg:hover:text-red-500 lg:hover:underline"
                         href={item.href}
                       >
                         {item.linkText}
@@ -70,7 +70,7 @@ const Footer = () => {
                   {legalLinks.map((item, idx) => (
                     <li key={idx}>
                       <a
-                        className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
+                        className="transition-colors lg:hover:text-red-500 lg:hover:underline"
                         href={item.href}
                       >
                         {item.linkText}
@@ -112,7 +112,7 @@ const Footer = () => {
                 {creditsLinks.map((item, idx) => (
                   <li key={idx}>
                     <a
-                      className="transition-colors ease-in-out duration-300 lg:hover:text-red-500"
+                      className="transition-colors lg:hover:text-red-500 lg:hover:underline"
                       href={item.href}
                     >
                       {item.linkText}
@@ -127,7 +127,7 @@ const Footer = () => {
                 {socialLinks.map((item, idx) => (
                   <li key={idx}>
                     <a
-                      className="text-2xl sm:text-xs transition-colors ease-in-out duration-300 lg:hover:text-red-500"
+                      className="text-2xl sm:text-xs transition-colors lg:hover:text-red-500"
                       href={item.href}
                     >
                       {item.icon}

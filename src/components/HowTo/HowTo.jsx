@@ -18,7 +18,7 @@ const HowToTrade = () => {
   return (
     <Section
       className="pb-8"
-      id="howToTradeSection"
+      id="howToSection"
       heading={sectionTextContent.headingText}
       paragraph={sectionTextContent.paragraphText}
     >
