@@ -45,7 +45,6 @@
     "@tailwindcss/line-clamp": "^0.3.1",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
-    "compression-webpack-plugin": "^9.2.0",
     "copy-webpack-plugin": "^9.0.1",
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",

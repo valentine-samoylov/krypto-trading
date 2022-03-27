@@ -2,22 +2,24 @@
 
 ## Features
 
-- Support of React library
-- React Refresh (**Dev mode**)
-- Tailwind CSS support
-- SASS/SCSS preprocessor support
-- PostCSS preprocessor
-  - Autoprefixer
+- Uses the Yarn 3.xx package manager with PnP mode
+- Supports React library
+- React Refresh (HMR) (**Dev mode**)
+- Supports styling with
+  - Tailwind CSS
+  - SASS/SCSS preprocessor
+  - PostCSS preprocessor
+    - Autoprefixer
 - Babel transpiller
 - Source-maps for CSS and JS files (**Dev mode**)
 - Minification of HTML/CSS/JS files (**Prod mode**)
 - Optimization of images with Squoosh (**Prod mode**)
   - Images can be converted to WEBP format (**Prod mode**)
 - SVGR converts SVG into React components and inserts them as inline SVG into HTML
-- ESlint and Stylelint
+- ESlint
 - Prettier
 - Webpack Bundle Analyzer (**Prod mode**)
-  - An HTML report file will be created in the **reports** folder.
+  - An HTML report file will be created in the **reports** folder
 
 ## Scripts
 

@@ -32,17 +32,16 @@ Thumbs.db
 *.sublime*
 
 # Node
+node_modules/
 npm-debug.log
 package-lock.json
 
 # Yarn
 .pnp.*
-.yarnrc.yml
-yarn.lock
-
-# Folders
-node_modules/
 .yarn/*
+!.yarn/releases/
+
+# Project Folders
 dist/
 reports/
 
