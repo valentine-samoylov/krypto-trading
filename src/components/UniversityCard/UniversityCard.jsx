@@ -1,5 +1,5 @@
-// BlogCard
-const BlogCard = (props) => {
+// UniversityCard
+const UniversityCard = (props) => {
   return (
     <article className="flex gap-8">
       <picture className="w-24 h-24 rounded-lg opacity-80 flex-shrink-0 flex-grow-0 aspect-square overflow-hidden sm:w-40 sm:h-40 ">
@@ -24,4 +24,4 @@ const BlogCard = (props) => {
   )
 }
 
-export default BlogCard
+export default UniversityCard

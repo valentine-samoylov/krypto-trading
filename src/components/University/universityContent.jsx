@@ -1,10 +1,10 @@
-// blogsContent
+// universityContent
 import articleImg01 from '@assets/images/content/blogs-01.jpg?as=webp'
 import articleImg02 from '@assets/images/content/blogs-02.jpg?as=webp'
 import articleImg03 from '@assets/images/content/blogs-03.jpg?as=webp'
 import articleImg04 from '@assets/images/content/blogs-04.jpg?as=webp'
 
-export const blogsContent = [
+export const universityContent = [
   {
     imgSrc: articleImg01,
     title: 'How to trade Bitcoin',

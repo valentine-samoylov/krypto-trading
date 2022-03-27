@@ -6,7 +6,7 @@ import Cryptos from '@components/Cryptos/Cryptos'
 import Features from '@components/Features/Features'
 import Downloads from '@components/Downloads/Downloads'
 import Testimonials from '@components/Testimonials/Testimonials'
-import Blogs from '@components/Blogs/Blogs'
+import University from '@components/University/University'
 import Footer from '@components/Footer/Footer'
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
         <Features />
         <Downloads />
         <Testimonials />
-        <Blogs />
+        <University />
       </main>
       <Footer />
     </>

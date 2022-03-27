@@ -1,9 +1,9 @@
-// Blogs
+// University
 import { useParallax } from 'react-scroll-parallax'
 import Section from '@components/Section/Section'
-import BlogCard from '@components/BlogCard/BlogCard'
+import UniversityCard from '@components/UniversityCard/UniversityCard'
 import Button from '@components/Button/Button'
-import { blogsContent } from './blogsContent'
+import { universityContent } from './universityContent'
 import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
 const sectionTextContent = {
@@ -11,7 +11,7 @@ const sectionTextContent = {
   paragraphText: 'Stay on top of current trends and improve your skills at the Krypto University!',
 }
 
-const Blogs = () => {
+const University = () => {
   const mnPlx = useParallax({ speed: 10 })
 
   return (
@@ -19,7 +19,7 @@ const Blogs = () => {
       className="pb-14 md:pb-16 lg:pb-20"
       heading={sectionTextContent.headingText}
       paragraph={sectionTextContent.paragraphText}
-      id="blogsSection"
+      id="uniSection"
     >
       <div className="relative z-0">
         <div
@@ -29,13 +29,13 @@ const Blogs = () => {
         ></div>
 
         <div className="grid gap-8 mb-12 md:grid-cols-2">
-          {blogsContent.map((item, idx) => (
-            <BlogCard data={item} key={idx} />
+          {universityContent.map((item, idx) => (
+            <UniversityCard data={item} key={idx} />
           ))}
         </div>
         <div className="flex justify-center">
           <Button kind="secondary" variant="lg">
-            Enroll crypto University
+            Enroll Crypto University
           </Button>
         </div>
       </div>
@@ -43,4 +43,4 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default University

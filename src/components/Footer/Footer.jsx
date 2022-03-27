@@ -7,23 +7,23 @@ import IconFacebook from '@assets/images/svg/social-facebook.svg'
 import IconBitcoin from '@assets/images/svg/social-bitcoin.svg'
 
 const anchorLinks = [
-  { href: '#', linkText: 'How it works' },
-  { href: '#', linkText: 'Cryptos' },
-  { href: '#', linkText: 'Features' },
-  { href: '#', linkText: 'Testimonial' },
-  { href: '#', linkText: 'Blogs' },
+  { href: '#howToSection', linkLabel: 'How it works' },
+  { href: '#cryptosSection', linkLabel: 'Cryptos' },
+  { href: '#featuresSection', linkLabel: 'Features' },
+  { href: '#testimonialsSection', linkLabel: 'Testimonials' },
+  { href: '#uniSection', linkLabel: 'University' },
 ]
 
 const legalLinks = [
-  { href: '#', linkText: 'Terms of use' },
-  { href: '#', linkText: 'Terms of conditions' },
-  { href: '#', linkText: 'Privacy policy' },
-  { href: '#', linkText: 'Cookie policy' },
+  { href: '#', linkLabel: 'Terms of use' },
+  { href: '#', linkLabel: 'Terms of conditions' },
+  { href: '#', linkLabel: 'Privacy policy' },
+  { href: '#', linkLabel: 'Cookie policy' },
 ]
 
 const creditsLinks = [
-  { href: '#', linkText: 'Privacy & Terms' },
-  { href: '#', linkText: 'Contact Us' },
+  { href: '#', linkLabel: 'Privacy & Terms' },
+  { href: '#', linkLabel: 'Contact Us' },
 ]
 
 const socialLinks = [
@@ -57,7 +57,7 @@ const Footer = () => {
                         className="transition-colors lg:hover:text-red-500 lg:hover:underline"
                         href={item.href}
                       >
-                        {item.linkText}
+                        {item.linkLabel}
                       </a>
                     </li>
                   ))}
@@ -73,7 +73,7 @@ const Footer = () => {
                         className="transition-colors lg:hover:text-red-500 lg:hover:underline"
                         href={item.href}
                       >
-                        {item.linkText}
+                        {item.linkLabel}
                       </a>
                     </li>
                   ))}
@@ -115,7 +115,7 @@ const Footer = () => {
                       className="transition-colors lg:hover:text-red-500 lg:hover:underline"
                       href={item.href}
                     >
-                      {item.linkText}
+                      {item.linkLabel}
                     </a>
                   </li>
                 ))}

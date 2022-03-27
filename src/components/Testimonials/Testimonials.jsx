@@ -30,7 +30,7 @@ const Testimonials = () => {
   return (
     <Section
       className="pb-20 md:pb-28 lg:pb-36"
-      id="cryptosSection"
+      id="testimonialsSection"
       heading={sectionTextContent.headingText}
       paragraph={sectionTextContent.paragraphText}
       variant="wide"
