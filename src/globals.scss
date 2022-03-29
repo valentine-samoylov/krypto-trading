@@ -1,4 +1,37 @@
-//// Global
+// Index
+@import 'reseter.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Rubik';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src: url('@assets/fonts/rubik-v19-latin-regular.woff2') format('woff2'),
+      url('@assets/fonts/rubik-v19-latin-regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Rubik';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+    src: url('@assets/fonts/rubik-v19-latin-500.woff2') format('woff2'),
+      url('@assets/fonts/rubik-v19-latin-500.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Rubik';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src: url('@assets/fonts/rubik-v19-latin-700.woff2') format('woff2'),
+      url('@assets/fonts/rubik-v19-latin-700.woff') format('woff');
+  }
+}
 
 // General
 html,
