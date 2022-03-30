@@ -1,4 +1,4 @@
-import React from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom'
 import ContextProviders from '@context/ContextProviders'
 import './globals.scss'
@@ -7,8 +7,10 @@ import App from './App'
 const mountNode = document.getElementById('root')
 
 ReactDOM.render(
-  <ContextProviders>
-    <App />
-  </ContextProviders>,
+  <StrictMode>
+    <ContextProviders>
+      <App />
+    </ContextProviders>
+  </StrictMode>,
   mountNode
 )
