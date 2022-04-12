@@ -42,8 +42,8 @@ const Footer = () => {
             <div className="sm:max-w-[16rem]">
               <Logo className="mb-5 md:mb-8" />
               <p className="text-lg">
-                Massa blandit semper varius faucibus. Suspendisse viverra venenatis placerat nam ut.
-                Pellentesque sit id tempor turpis.
+                Krypto is a global secure cryptocurrency trading platform. Contact our support team
+                for more information.
               </p>
             </div>
 

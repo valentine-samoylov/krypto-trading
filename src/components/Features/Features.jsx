@@ -5,22 +5,18 @@ import FeatureCard from '@components/FeatureCard/FeatureCard'
 import { featuresContent } from './featuresContent'
 import coinBTC from '@assets/images/bg/coin-BTC.png?as=webp'
 
-const sectionTextContent = {
-  headingText: 'Attractive Features',
-  paragraphText:
+const sectionProps = {
+  heading: 'Attractive Features',
+  paragraph:
     'Our key features that set the standard in the industry and are so well appreciated by our users.',
+  id: 'featuresSection',
 }
 
 const Features = () => {
   const btcPlx = useParallax({ speed: -10 })
 
   return (
-    <Section
-      className="pb-20 md:pb-28 lg:pb-36"
-      id="featuresSection"
-      heading={sectionTextContent.headingText}
-      paragraph={sectionTextContent.paragraphText}
-    >
+    <Section className="pb-20 md:pb-28 lg:pb-36" {...sectionProps}>
       <div className="relative z-0">
         <div
           className="absolute -top-[18%] -right-[15%] sm:-right-[6%] -z-[1] w-[8.796vh] h-[8.796vh] bg-contain pointer-events-none sm:-top-[25%] lg:-top-[40%]"

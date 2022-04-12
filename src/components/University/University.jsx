@@ -6,21 +6,17 @@ import Button from '@components/Button/Button'
 import { universityContent } from './universityContent'
 import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
-const sectionTextContent = {
-  headingText: 'Crypto Market Analysis',
-  paragraphText: 'Stay on top of current trends and improve your skills at the Krypto University!',
+const sectionProps = {
+  heading: 'Crypto Market Analysis',
+  paragraph: 'Stay on top of current trends and improve your skills at the Krypto University!',
+  id: 'uniSection',
 }
 
 const University = () => {
   const mnPlx = useParallax({ speed: 10 })
 
   return (
-    <Section
-      className="pb-14 md:pb-16 lg:pb-20"
-      heading={sectionTextContent.headingText}
-      paragraph={sectionTextContent.paragraphText}
-      id="uniSection"
-    >
+    <Section className="pb-14 md:pb-16 lg:pb-20" {...sectionProps}>
       <div className="relative z-0">
         <div
           className="absolute -bottom-[11%] -right-[13%] -z-[1] w-[8.333vh] h-[8.333vh] bg-contain pointer-events-none sm:-bottom-[19%] sm:-right-[6.5%]"

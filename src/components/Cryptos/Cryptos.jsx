@@ -19,9 +19,11 @@ import ArrowNext from '@assets/images/svg/ui-arrow-next.svg'
 import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 import coinLTC from '@assets/images/bg/coin-LTC-02.png?as=webp'
 
-const sectionTextContent = {
-  headingText: 'Available Cryptos',
-  paragraphText: 'Check out our cryptocurrency offerings and current exchange rates.',
+const sectionProps = {
+  heading: 'Available Cryptos',
+  paragraph: 'Check out our cryptocurrency offerings and current exchange rates.',
+  id: 'cryptosSection',
+  variant: 'wide',
 }
 
 const endpoints = [
@@ -100,13 +102,7 @@ const Cryptos = () => {
   ]
 
   return (
-    <Section
-      className="pb-20 lg:pb-36"
-      id="cryptosSection"
-      heading={sectionTextContent.headingText}
-      paragraph={sectionTextContent.paragraphText}
-      variant="wide"
-    >
+    <Section className="pb-20 lg:pb-36" {...sectionProps}>
       <Container variant="mobFluid">
         <div>
           <div

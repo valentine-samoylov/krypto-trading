@@ -14,9 +14,11 @@ import coinBTC from '@assets/images/bg/coin-BTC.png?as=webp'
 import coinETH from '@assets/images/bg/coin-ETH.png?as=webp'
 import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
-const sectionTextContent = {
-  headingText: '30 Million Users Worldwide',
-  paragraphText: "Still haven't made up your mind? See what our users are saying about us!",
+const sectionProps = {
+  heading: '30 Million Users Worldwide',
+  paragraph: "Still haven't made up your mind? See what our users are saying about us!",
+  id: 'testimonialsSection',
+  variant: 'wide',
 }
 
 const Testimonials = () => {
@@ -28,13 +30,7 @@ const Testimonials = () => {
   const navigationNextRef = useRef(null)
 
   return (
-    <Section
-      className="pb-20 md:pb-28 lg:pb-36"
-      id="testimonialsSection"
-      heading={sectionTextContent.headingText}
-      paragraph={sectionTextContent.paragraphText}
-      variant="wide"
-    >
+    <Section className="pb-20 md:pb-28 lg:pb-36" {...sectionProps}>
       <Container variant="mobFluid">
         <div>
           <div
