@@ -15,7 +15,7 @@ const CryptoCard = (props) => {
           loading="lazy"
         />
       </div>
-      <div className="flex flex-col min-h-[16rem] p-6 bg-white sm:min-h-[18.75rem]">
+      <div className="flex flex-col min-h-[16rem] p-4 bg-white sm:min-h-[18.75rem] sm:p-6">
         <h3 className="mb-3 text-2xl font-medium text-black">{props.data.title}</h3>
         <p className="text-lg text-black/60 line-clamp-3">{props.data.text}</p>
         <div className="flex flex-col justify-between gap-4 mt-auto pt-6 xl:flex-row xl:items-center">

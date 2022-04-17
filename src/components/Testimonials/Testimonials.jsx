@@ -2,8 +2,9 @@
 import { useRef } from 'react'
 import { useParallax } from 'react-scroll-parallax'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper'
+import { Navigation, Pagination } from 'swiper'
 import 'swiper/scss'
+import 'swiper/css/pagination'
 import Section from '@components/Section/Section'
 import Container from '@components/Container/Container'
 import TestimonialCard from '@components/TestimonialCard/TestimonialCard'
@@ -51,7 +52,7 @@ const Testimonials = () => {
         </div>
 
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
           spaceBetween={32}
           slidesPerView={'auto'}
           centeredSlides={true}
@@ -59,6 +60,9 @@ const Testimonials = () => {
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
+          }}
+          pagination={{
+            dynamicBullets: true,
           }}
           onSwiper={(swiper) => {
             setTimeout(() => {

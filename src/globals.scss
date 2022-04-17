@@ -195,6 +195,7 @@ div.react-player__preview {
   flex: 1 0 100%;
   @extend .ol-blend-darken;
 }
+
 // Swiper-related styles
 .swiper {
   margin: -3.125rem 0;
@@ -207,4 +208,14 @@ div.react-player__preview {
 .swiper-slide-active.slide-shadow article {
   box-shadow: 0 0 2.5rem rgba(#ef4444, 0.4);
   transition: all 0.3s ease-in;
+}
+
+.swiper-pagination {
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #ef4444;
 }

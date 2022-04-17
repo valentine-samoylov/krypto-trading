@@ -2,9 +2,10 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParallax } from 'react-scroll-parallax'
 import axios from 'axios'
-import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination } from 'swiper'
 import 'swiper/scss'
+import 'swiper/css/pagination'
 import Section from '@components/Section/Section'
 import Container from '@components/Container/Container'
 import CryptoCard from '@components/CryptoCard/CryptoCard'
@@ -118,7 +119,7 @@ const Cryptos = () => {
         </div>
 
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
           spaceBetween={32}
           slidesPerView={'auto'}
           centeredSlides={true}
@@ -126,6 +127,9 @@ const Cryptos = () => {
           navigation={{
             prevEl: navigationPrevRef.current,
             nextEl: navigationNextRef.current,
+          }}
+          pagination={{
+            dynamicBullets: true,
           }}
           onSwiper={(swiper) => {
             setTimeout(() => {
