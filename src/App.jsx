@@ -1,10 +1,7 @@
 // App
-import React from 'react'
 import Home from '@/pages/Home'
-class App extends React.Component {
-  render() {
-    return <Home />
-  }
+const App = () => {
+  return <Home />
 }
 
 export default App

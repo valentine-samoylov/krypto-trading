@@ -27,14 +27,8 @@ const sectionProps = {
   variant: 'wide',
 }
 
-const endpoints = [
-  'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd',
-  'https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd',
-  'https://api.coingecko.com/api/v3/simple/price?ids=litecoin&vs_currencies=usd',
-  'https://api.coingecko.com/api/v3/simple/price?ids=tezos&vs_currencies=usd',
-  'https://api.coingecko.com/api/v3/simple/price?ids=cardano&vs_currencies=usd',
-  'https://api.coingecko.com/api/v3/simple/price?ids=dogecoin&vs_currencies=usd',
-]
+const endpoint =
+  'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin%2C%20ethereum%2C%20litecoin%2C%20tezos%2C%20cardano%2C%20dogecoin%2C&page=1&sparkline=false'
 
 const Cryptos = () => {
   const mnPlx = useParallax({ speed: 10 })
@@ -43,20 +37,18 @@ const Cryptos = () => {
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
 
-  const [coinData, setCoinsPrices] = useState([])
+  const [coinPrices, setCoinsPrices] = useState([])
 
   const getCoinPrices = () => {
-    Promise.all(endpoints.map((endpoint) => axios.get(endpoint))).then(
-      axios.spread((...resData) => {
-        let coinValues = []
+    axios.get(endpoint).then((res) => {
+      let coinPrices = []
+      let coinsData = res.data
 
-        for (let i = 0; i < resData.length; i++) {
-          let coin = Object.values(resData[i].data)
-          coinValues.push(coin[0].usd)
-        }
-        setCoinsPrices(coinValues)
-      })
-    )
+      for (let i = 0; i < res.data.length; i++) {
+        coinPrices.push(coinsData[i].current_price)
+      }
+      setCoinsPrices(coinPrices)
+    })
   }
 
   useEffect(() => {
@@ -68,37 +60,37 @@ const Cryptos = () => {
       imgSrc: imgBTC,
       title: 'Bitcoin',
       text: 'A very accessible and versatile currency with big liquidity and high return potential. ',
-      cryptoPrice: coinData[0],
+      cryptoPrice: coinPrices[0],
     },
     {
       imgSrc: imgETH,
       title: 'Ethereum',
       text: 'A secure, decentralized currency, second-most popular Crypto in the market.',
-      cryptoPrice: coinData[1],
+      cryptoPrice: coinPrices[1],
     },
     {
       imgSrc: imgLTC,
       title: 'Litecoin',
       text: 'Fast transitions, lower fees than other cryptocurrencies. Explosive returns are possible during uptrends.',
-      cryptoPrice: coinData[2],
+      cryptoPrice: coinPrices[2],
     },
     {
       imgSrc: imgXTZ,
       title: 'Tezos',
       text: 'Self-amending multi-purpose blockchain platform for secure decentralized transactions.',
-      cryptoPrice: coinData[3],
+      cryptoPrice: coinPrices[3],
     },
     {
       imgSrc: imgADA,
       title: 'Cardano',
       text: 'An environmentally friendly currency with low fees for fast and secure decentralized transactions.',
-      cryptoPrice: coinData[4],
+      cryptoPrice: coinPrices[4],
     },
     {
       imgSrc: imgDOGE,
       title: 'Dogecoin',
       text: 'Send value quick and securely to anyone internally, accepted by many vendors. Perfectly fits for low-capital investments.',
-      cryptoPrice: coinData[5],
+      cryptoPrice: coinPrices[5],
     },
   ]
 
