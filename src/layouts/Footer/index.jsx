@@ -1,6 +1,6 @@
 // Footer
-import Container from '@components/Container/Container'
-import Logo from '@components/Logo/Logo'
+import Container from '@components/Container'
+import Logo from '@components/Logo'
 import IconYoutube from '@assets/images/svg/social-youtube.svg'
 import IconLinkedIn from '@assets/images/svg/social-linkedin.svg'
 import IconFacebook from '@assets/images/svg/social-facebook.svg'

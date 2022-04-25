@@ -1,7 +1,7 @@
 // Countdown
 import { useEffect, useState } from 'react'
 
-const targetTime = new Date('2022-05-05').getTime()
+const targetTime = new Date('2022-06-01').getTime()
 
 const Countdown = () => {
   const [currentTime, setCurrentTime] = useState(Date.now())

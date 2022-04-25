@@ -1,8 +1,8 @@
 // HowToTrade
 import { useParallax } from 'react-scroll-parallax'
-import Section from '@components/Section/Section'
-import HowToTabs from '@components/HowToTabs/HowToTabs'
-import { howToContent } from './howToContent'
+import Section from '@components/Section'
+import HowToTabs from '@components/HowToTabs'
+import { howToContent } from '@data'
 import coinETH from '@assets/images/bg/coin-ETH.png?as=webp'
 
 const sectionProps = {

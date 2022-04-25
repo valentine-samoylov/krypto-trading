@@ -1,6 +1,6 @@
 // Section
-import Container from '@components/Container/Container'
-import Heading from '@components/Heading/Heading'
+import Container from '@components/Container'
+import Heading from '@components/Heading'
 
 const Section = (props) => {
   return (

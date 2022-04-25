@@ -1,7 +1,7 @@
 // Header
 import { useState, useEffect, useRef } from 'react'
-import Nav from '@components/Nav/Nav'
-import Logo from '@components/Logo/Logo'
+import Nav from '@components/Nav'
+import Logo from '@components/Logo'
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)

@@ -1,8 +1,8 @@
 // Hero
 import { useParallax } from 'react-scroll-parallax'
-import Container from '@components/Container/Container'
-import Countdown from '@components/Countdown/Countdown'
-import Button from '@components/Button/Button'
+import Container from '@components/Container'
+import Countdown from '@components/Countdown'
+import Button from '@components/Button'
 import bgImage from '@assets/images/bg/hero-bg.jpg?as=webp'
 import IconBitcoin from '@assets/images/svg/coin-icon-01.svg'
 import IconLitecoin from '@assets/images/svg/coin-icon-02.svg'

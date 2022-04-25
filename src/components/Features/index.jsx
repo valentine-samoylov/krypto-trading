@@ -1,8 +1,8 @@
 // Features
 import { useParallax } from 'react-scroll-parallax'
-import Section from '@components/Section/Section'
-import FeatureCard from '@components/FeatureCard/FeatureCard'
-import { featuresContent } from './featuresContent'
+import Section from '@components/Section'
+import FeatureCard from '@components/FeatureCard'
+import { featuresContent } from '@data'
 import coinBTC from '@assets/images/bg/coin-BTC.png?as=webp'
 
 const sectionProps = {

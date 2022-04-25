@@ -1,7 +1,7 @@
 // HowToTabs
 import { Tab } from '@headlessui/react'
-import useClassNames from '@hooks/useClassNames/'
-import VideoPlayer from '@components/VideoPlayer/VideoPlayer'
+import useClassNames from '@hooks/useClassNames'
+import VideoPlayer from '@components/VideoPlayer'
 
 const HowToTabs = (props) => {
   return (

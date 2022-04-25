@@ -1,7 +1,7 @@
 // Downloads
-import Container from '@components/Container/Container'
-import Heading from '@components/Heading/Heading'
-import Button from '@components/Button/Button'
+import Container from '@components/Container'
+import Heading from '@components/Heading'
+import Button from '@components/Button'
 import bgImage from '@assets/images/bg/downloads-bg.jpg?as=webp'
 import BadgeGooglePlay from '@assets/images/svg/badge-google-play.svg'
 import BadgeAppStore from '@assets/images/svg/badge-app-store.svg'

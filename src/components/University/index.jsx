@@ -1,9 +1,9 @@
 // University
 import { useParallax } from 'react-scroll-parallax'
-import Section from '@components/Section/Section'
-import UniversityCard from '@components/UniversityCard/UniversityCard'
-import Button from '@components/Button/Button'
-import { universityContent } from './universityContent'
+import Section from '@components/Section'
+import UniversityCard from '@components/UniversityCard'
+import Button from '@components/Button'
+import { universityContent } from '@data'
 import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
 
 const sectionProps = {
