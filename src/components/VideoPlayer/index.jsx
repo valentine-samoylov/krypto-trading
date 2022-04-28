@@ -5,7 +5,7 @@ import PlayIcon from '@assets/images/svg/ui-play.svg'
 const VideoPlayer = (props) => {
   return (
     <ReactPlayer
-      className="width-full height-full rounded-xl aspect-540/673 overflow-hidden object-cover max-w-[25rem] sm:max-w-none"
+      className="width-full height-full rounded-xl aspect-vertical-video overflow-hidden object-cover max-w-[25rem] sm:max-w-none"
       url={props.data.videoSrc}
       width="100%"
       height="auto"

@@ -35,7 +35,7 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="pt-14 pb-16 bg-cs-primary text-xs text-white md:pt-16 lg:pt-20 md:pb-20 lg:pb-24">
+    <footer className="pt-14 pb-16 bg-navy text-xs text-white md:pt-16 lg:pt-20 md:pb-20 lg:pb-24">
       <Container>
         <div className="divide-y divide-white/20">
           <div className="flex flex-col flex-wrap gap-8 pb-14 sm:flex-row sm:items-start sm:max-w-none sm:text-left md:pb-16 lg:pb-20 lg:flex-nowrap">

@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full py-3 bg-cs-primary text-white transition-shadow duration-500 md:py-4 lg:py-8 ${
+      className={`fixed top-0 left-0 z-50 w-full py-3 bg-navy text-white transition-shadow duration-500 md:py-4 lg:py-8 ${
         isScrolled ? 'shadow-md' : ''
       }`}
       ref={headerRef}

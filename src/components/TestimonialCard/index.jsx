@@ -3,7 +3,7 @@ import QuotationIcon from '@assets/images/svg/quot-mark-icon.svg'
 
 const TestimonialCard = (props) => {
   return (
-    <article className="flex flex-col items-center h-auto px-4 py-9 rounded-xl bg-cs-primary border-2 border-red-500 text-center overflow-hidden sm:px-9 sm:py-16">
+    <article className="flex flex-col items-center h-auto px-4 py-9 rounded-xl bg-navy border-2 border-red-500 text-center overflow-hidden sm:px-9 sm:py-16">
       <QuotationIcon width="5rem" height="5rem" />
       <div className="flex flex-col items-center pt-6 min-h-[15.25rem]">
         <p className="mb-6 text-lg line-clamp-3 text-white/60">{props.data.authorText}</p>

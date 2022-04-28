@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'cs-primary': '#160E33', //Primary custom color
+        navy: '#160E33',
       },
       boxShadow: {
         'glow-xs': '0px 0px 0.4rem rgba(239, 68, 68, 0.4)',
@@ -28,7 +28,7 @@ module.exports = {
       },
       aspectRatio: {
         '4/3': '4 / 3',
-        '540/673': '540 / 673',
+        'vertical-video': '540 / 673',
       },
       fontFamily: { sans: ['Rubik', 'sans-serif'] },
     },

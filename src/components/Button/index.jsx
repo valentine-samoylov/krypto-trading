@@ -2,7 +2,7 @@
 const buttonProps = {
   kind: {
     primary: 'bg-red-500',
-    secondary: 'bg-cs-primary/50 border-2 border-red-500',
+    secondary: 'bg-navy/50 border-2 border-red-500',
     download: 'py-[2px] rounded-[0.625rem] bg-black border-2 border-white overflow-hidden',
   },
   variant: {

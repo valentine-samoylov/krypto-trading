@@ -28,7 +28,7 @@ const Countdown = () => {
   ]
 
   return (
-    <ul className="flex mb-10 px-10 py-2 bg-cs-primary/50 rounded-[5rem]">
+    <ul className="flex mb-10 px-10 py-2 bg-navy/50 rounded-[5rem]">
       {countdownData.map((item, idx) => (
         <li
           className="flex items-center after:content-[':'] after:p-[2px] last:after:content-none"
