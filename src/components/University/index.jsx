@@ -1,14 +1,14 @@
 // University
 import { useParallax } from 'react-scroll-parallax'
-import Section from '@components/Section'
-import UniversityCard from '@components/UniversityCard'
-import Button from '@components/Button'
-import { universityContent } from '@data'
-import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
+import Section from '@/components/Section'
+import UniversityCard from '@/components/UniversityCard'
+import Button from '@/components/Button'
+import { universityData } from '@/data'
+import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
 
 const sectionProps = {
-  heading: 'Crypto Market Analysis',
-  paragraph: 'Stay on top of current trends and improve your skills at the Krypto University!',
+  heading: universityData.heading,
+  paragraph: universityData.paragraph,
   id: 'uniSection',
 }
 
@@ -25,7 +25,7 @@ const University = () => {
         ></div>
 
         <div className="grid gap-8 mb-12 md:grid-cols-2">
-          {universityContent.map((item, idx) => (
+          {universityData.content.map((item, idx) => (
             <UniversityCard data={item} key={idx} />
           ))}
         </div>

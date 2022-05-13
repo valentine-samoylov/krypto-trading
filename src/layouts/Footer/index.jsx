@@ -1,37 +1,7 @@
 // Footer
-import Container from '@components/Container'
-import Logo from '@components/Logo'
-import IconYoutube from '@assets/images/svg/social-youtube.svg'
-import IconLinkedIn from '@assets/images/svg/social-linkedin.svg'
-import IconFacebook from '@assets/images/svg/social-facebook.svg'
-import IconBitcoin from '@assets/images/svg/social-bitcoin.svg'
-
-const anchorLinks = [
-  { href: '#howToSection', linkLabel: 'How it works' },
-  { href: '#cryptosSection', linkLabel: 'Cryptos' },
-  { href: '#featuresSection', linkLabel: 'Features' },
-  { href: '#testimonialsSection', linkLabel: 'Testimonials' },
-  { href: '#uniSection', linkLabel: 'University' },
-]
-
-const legalLinks = [
-  { href: '#', linkLabel: 'Terms of use' },
-  { href: '#', linkLabel: 'Terms of conditions' },
-  { href: '#', linkLabel: 'Privacy policy' },
-  { href: '#', linkLabel: 'Cookie policy' },
-]
-
-const creditsLinks = [
-  { href: '#', linkLabel: 'Privacy & Terms' },
-  { href: '#', linkLabel: 'Contact Us' },
-]
-
-const socialLinks = [
-  { href: '#', icon: <IconYoutube title="YouTube Channel" /> },
-  { href: '#', icon: <IconLinkedIn title="LinkedIn Page" /> },
-  { href: '#', icon: <IconFacebook title="Facebook Community" /> },
-  { href: '#', icon: <IconBitcoin title="Bitcoin Website" /> },
-]
+import Container from '@/components/Container'
+import Logo from '@/components/Logo'
+import { footerData } from '@/data'
 
 const Footer = () => {
   return (
@@ -51,7 +21,7 @@ const Footer = () => {
               <div className="md:min-w-[10rem]">
                 <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Links</h3>
                 <ul className="space-y-4 text-lg">
-                  {anchorLinks.map((item, idx) => (
+                  {footerData.anchorLinks.map((item, idx) => (
                     <li key={idx}>
                       <a
                         className="transition-colors lg:hover:text-red-500 lg:hover:underline"
@@ -67,7 +37,7 @@ const Footer = () => {
               <div className="md:min-w-[10rem]">
                 <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Legal</h3>
                 <ul className="space-y-4 text-lg">
-                  {legalLinks.map((item, idx) => (
+                  {footerData.legalLinks.map((item, idx) => (
                     <li key={idx}>
                       <a
                         className="transition-colors lg:hover:text-red-500 lg:hover:underline"
@@ -109,7 +79,7 @@ const Footer = () => {
           <div className="pt-5">
             <div className="flex flex-col items-center flex-wrap gap-4 sm:flex-row">
               <ul className="flex flex-shrink-0 gap-4 sm:min-w-[200px]">
-                {creditsLinks.map((item, idx) => (
+                {footerData.creditsLinks.map((item, idx) => (
                   <li key={idx}>
                     <a
                       className="transition-colors lg:hover:text-red-500 lg:hover:underline"
@@ -121,10 +91,10 @@ const Footer = () => {
                 ))}
               </ul>
 
-              <div className="sm:mx-auto sm:text-center">Copyright @ 2022 xpence</div>
+              <div className="sm:mx-auto sm:text-center">Copyright 2022 xpence</div>
 
               <ul className="flex sm:justify-end gap-4 sm:gap-3 sm:min-w-[200px]">
-                {socialLinks.map((item, idx) => (
+                {footerData.socialLinks.map((item, idx) => (
                   <li key={idx}>
                     <a
                       className="text-2xl sm:text-xs transition-colors lg:hover:text-red-500"

@@ -5,19 +5,19 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper'
 import 'swiper/scss'
 import 'swiper/css/pagination'
-import Section from '@components/Section'
-import Container from '@components/Container'
-import TestimonialCard from '@components/TestimonialCard'
-import { testimonialsContent } from '@data'
-import ArrowPrev from '@assets/images/svg/ui-arrow-prev.svg'
-import ArrowNext from '@assets/images/svg/ui-arrow-next.svg'
-import coinBTC from '@assets/images/bg/coin-BTC.png?as=webp'
-import coinETH from '@assets/images/bg/coin-ETH.png?as=webp'
-import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
+import Section from '@/components/Section'
+import Container from '@/components/Container'
+import TestimonialCard from '@/components/TestimonialCard'
+import { testimonialsData } from '@/data'
+import ArrowPrev from '@/assets/images/svg/ui-arrow-prev.svg'
+import ArrowNext from '@/assets/images/svg/ui-arrow-next.svg'
+import coinBTC from '@/assets/images/bg/coin-BTC.png?as=webp'
+import coinETH from '@/assets/images/bg/coin-ETH.png?as=webp'
+import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
 
 const sectionProps = {
-  heading: '30 Million Users Worldwide',
-  paragraph: "Still haven't made up your mind? See what our users are saying about us!",
+  heading: testimonialsData.heading,
+  paragraph: testimonialsData.paragraph,
   id: 'testimonialsSection',
   variant: 'wide',
 }
@@ -80,7 +80,7 @@ const Testimonials = () => {
             },
           }}
         >
-          {testimonialsContent.map((item, idx) => (
+          {testimonialsData.content.map((item, idx) => (
             <SwiperSlide
               className="max-w-[18rem] slide-shadow md:max-w-[20rem] lg:max-w-none"
               key={idx}

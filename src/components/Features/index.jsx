@@ -1,14 +1,13 @@
 // Features
 import { useParallax } from 'react-scroll-parallax'
-import Section from '@components/Section'
-import FeatureCard from '@components/FeatureCard'
-import { featuresContent } from '@data'
-import coinBTC from '@assets/images/bg/coin-BTC.png?as=webp'
+import Section from '@/components/Section'
+import FeatureCard from '@/components/FeatureCard'
+import { featuresData } from '@/data'
+import coinBTC from '@/assets/images/bg/coin-BTC.png?as=webp'
 
 const sectionProps = {
-  heading: 'Attractive Features',
-  paragraph:
-    'Our key features that set the standard in the industry and are so well appreciated by our users.',
+  heading: featuresData.heading,
+  paragraph: featuresData.paragraph,
   id: 'featuresSection',
 }
 
@@ -25,7 +24,7 @@ const Features = () => {
         ></div>
 
         <div className="grid gap-8 justify-center sm:grid-cols-2 xl:grid-cols-3 ">
-          {featuresContent.map((item, idx) => (
+          {featuresData.items.map((item, idx) => (
             <FeatureCard data={item} key={idx} />
           ))}
         </div>

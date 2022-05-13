@@ -1,17 +1,18 @@
 // Hero
 import { useParallax } from 'react-scroll-parallax'
-import Container from '@components/Container'
-import Countdown from '@components/Countdown'
-import Button from '@components/Button'
-import bgImage from '@assets/images/bg/hero-bg.jpg?as=webp'
-import IconBitcoin from '@assets/images/svg/coin-icon-01.svg'
-import IconLitecoin from '@assets/images/svg/coin-icon-02.svg'
-import IconChainlink from '@assets/images/svg/coin-icon-03.svg'
-import IconSiacoin from '@assets/images/svg/coin-icon-04.svg'
-import coinBTC from '@assets/images/bg/coin-BTC.png?as=webp'
-import coinETH from '@assets/images/bg/coin-ETH.png?as=webp'
-import coinLTC from '@assets/images/bg/coin-LTC-01.png?as=webp'
-import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
+import Container from '@/components/Container'
+import Countdown from '@/components/Countdown'
+import Button from '@/components/Button'
+import bgImage from '@/assets/images/bg/hero-bg.jpg?as=webp'
+import IconBitcoin from '@/assets/images/svg/coin-icon-01.svg'
+import IconLitecoin from '@/assets/images/svg/coin-icon-02.svg'
+import IconChainlink from '@/assets/images/svg/coin-icon-03.svg'
+import IconSiacoin from '@/assets/images/svg/coin-icon-04.svg'
+import coinBTC from '@/assets/images/bg/coin-BTC.png?as=webp'
+import coinETH from '@/assets/images/bg/coin-ETH.png?as=webp'
+import coinLTC from '@/assets/images/bg/coin-LTC-01.png?as=webp'
+import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
+import { heroData } from '@/data'
 
 const currenciesData = [
   {
@@ -72,9 +73,9 @@ const Hero = () => {
           ></div>
 
           <h1 className="mb-7 pt-12 text-5xl text-center font-bold md:text-6xl lg:text-8xl ">
-            Next Generation <br /> Crypto Trading
+            <span className="block">{heroData.heading1}</span>
+            <span className="block">{heroData.heading2}</span>
           </h1>
-          <p className="mb-6 text-lg">Crypto Market Starts in</p>
 
           <Countdown />
 

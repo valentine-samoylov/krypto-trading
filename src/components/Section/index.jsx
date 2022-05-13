@@ -1,10 +1,10 @@
 // Section
-import Container from '@components/Container'
-import Heading from '@components/Heading'
+import Container from '@/components/Container'
+import Heading from '@/components/Heading'
 
 const Section = (props) => {
   return (
-    <section className={`pt-16 md:pt-20 lg:pt-24 ${props.className || ''}`}>
+    <section className={`pt-16 md:pt-20 lg:pt-24 ${props.className || ''}`} id={props.id}>
       <div className="mb-14 text-center md:mb-16 lg:mb-20">
         <Container>
           <Heading>{props.heading}</Heading>

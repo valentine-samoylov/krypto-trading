@@ -28,19 +28,23 @@ const Countdown = () => {
   ]
 
   return (
-    <ul className="flex mb-10 px-10 py-2 bg-navy/50 rounded-[5rem]">
-      {countdownData.map((item, idx) => (
-        <li
-          className="flex items-center after:content-[':'] after:p-[2px] last:after:content-none"
-          key={idx}
-        >
-          <div className="flex flex-col items-center px-2">
-            <time className="text-red-500 text-3xl font-medium">{item.countdownNum}</time>
-            <span className="text-xs uppercase">{item.countdownText}</span>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <>
+      <p className="mb-6 text-lg">Crypto Market Starts in</p>
+
+      <ul className="flex mb-10 px-10 py-2 bg-navy/50 rounded-[5rem]">
+        {countdownData.map((item, idx) => (
+          <li
+            className="flex items-center after:content-[':'] after:p-[2px] last:after:content-none"
+            key={idx}
+          >
+            <div className="flex flex-col items-center px-2">
+              <time className="text-red-500 text-3xl font-medium">{item.countdownNum}</time>
+              <span className="text-xs uppercase">{item.countdownText}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </>
   )
 }
 

@@ -1,10 +1,11 @@
 // Downloads
-import Container from '@components/Container'
-import Heading from '@components/Heading'
-import Button from '@components/Button'
-import bgImage from '@assets/images/bg/downloads-bg.jpg?as=webp'
-import BadgeGooglePlay from '@assets/images/svg/badge-google-play.svg'
-import BadgeAppStore from '@assets/images/svg/badge-app-store.svg'
+import Container from '@/components/Container'
+import Heading from '@/components/Heading'
+import Button from '@/components/Button'
+import { downloadsData } from '@/data'
+import bgImage from '@/assets/images/bg/downloads-bg.jpg?as=webp'
+import BadgeGooglePlay from '@/assets/images/svg/badge-google-play.svg'
+import BadgeAppStore from '@/assets/images/svg/badge-app-store.svg'
 
 const downloadLinksData = [
   {
@@ -27,7 +28,7 @@ const Downloads = () => {
       id="downloadsSection"
     >
       <Container>
-        <Heading>Most advanced crypto trading platform ever!</Heading>
+        <Heading>{downloadsData.heading}</Heading>
         <div className="flex flex-col justify-center items-center gap-6 py-5 sm:flex-row sm:gap-8">
           {downloadLinksData.map((item, idx) => (
             <Button kind="download" shadow="xl" key={idx}>

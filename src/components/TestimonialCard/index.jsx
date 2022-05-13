@@ -1,5 +1,5 @@
 // TestimonialCard
-import QuotationIcon from '@assets/images/svg/quot-mark-icon.svg'
+import QuotationIcon from '@/assets/images/svg/quot-mark-icon.svg'
 
 const TestimonialCard = (props) => {
   return (

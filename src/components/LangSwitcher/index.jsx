@@ -1,11 +1,11 @@
 // LangSwitcher
 import { useState } from 'react'
 import { Listbox } from '@headlessui/react'
-import US from '@assets/images/svg/lang-en-us.svg'
-import GB from '@assets/images/svg/lang-en-gb.svg'
-import ES from '@assets/images/svg/lang-es.svg'
-import ArrowDown from '@assets/images/svg/ui-arrow-down.svg'
-import ItemCheck from '@assets/images/svg/ui-check.svg'
+import US from '@/assets/images/svg/lang-en-us.svg'
+import GB from '@/assets/images/svg/lang-en-gb.svg'
+import ES from '@/assets/images/svg/lang-es.svg'
+import ArrowDown from '@/assets/images/svg/ui-arrow-down.svg'
+import ItemCheck from '@/assets/images/svg/ui-check.svg'
 
 const languages = [
   { id: 1, flag: <US title="English (USA)" />, abbr: 'EN-US', unavailable: false },

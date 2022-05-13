@@ -1,13 +1,13 @@
 // HowToTrade
 import { useParallax } from 'react-scroll-parallax'
-import Section from '@components/Section'
-import HowToTabs from '@components/HowToTabs'
-import { howToContent } from '@data'
-import coinETH from '@assets/images/bg/coin-ETH.png?as=webp'
+import Section from '@/components/Section'
+import HowToTabs from '@/components/HowToTabs'
+import { howToData } from '@/data'
+import coinETH from '@/assets/images/bg/coin-ETH.png?as=webp'
 
 const sectionProps = {
-  heading: 'How to Trade With Krypto',
-  paragraph: 'Becoming a cryptotrader on our platform has never been easier!',
+  heading: howToData.heading,
+  paragraph: howToData.paragraph,
   id: 'howToSection',
 }
 
@@ -23,7 +23,7 @@ const HowToTrade = () => {
           ref={ethPlx.ref}
         ></div>
 
-        <HowToTabs data={howToContent} />
+        <HowToTabs data={howToData.tabsContent} />
       </div>
     </Section>
   )

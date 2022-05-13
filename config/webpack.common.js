@@ -61,15 +61,6 @@ module.exports = {
     extensions: ['.js', '.jsx', '.json'],
     alias: {
       '@': paths.src,
-      '@assets': `${paths.src}/assets`,
-      '@components': `${paths.src}/components`,
-      '@hooks': `${paths.src}/hooks`,
-      '@context': `${paths.src}/context`,
-      '@layouts': `${paths.src}/layouts`,
-      '@pages': `${paths.src}/pages`,
-      '@utils': `${paths.src}/utils`,
-      '@data': `${paths.src}/data`,
-      assets: paths.public,
     },
   },
 }

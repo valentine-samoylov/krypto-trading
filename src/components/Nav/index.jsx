@@ -1,11 +1,11 @@
 // Nav
 import { useState, useEffect, useRef } from 'react'
-import useOnClickOutside from '@hooks/useOnClickOutside'
-import LangSwitcher from '@components/LangSwitcher'
-import NavLink from '@components/NavLink'
-import { navLinks } from '@data'
-import MenuOpen from '@assets/images/svg/ui-menu-open.svg'
-import MenuClose from '@assets/images/svg/ui-menu-close.svg'
+import useOnClickOutside from '@/hooks/useOnClickOutside'
+import LangSwitcher from '@/components/LangSwitcher'
+import NavLink from '@/components/NavLink'
+import { navLinks } from '@/data'
+import MenuOpen from '@/assets/images/svg/ui-menu-open.svg'
+import MenuClose from '@/assets/images/svg/ui-menu-close.svg'
 
 const Nav = () => {
   const [navIsOpen, setNavOpen] = useState(false)

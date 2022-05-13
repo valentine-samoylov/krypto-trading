@@ -1,5 +1,5 @@
 // Logo
-import LogoImg from '@assets/images/svg/logo.svg'
+import LogoImg from '@/assets/images/svg/logo.svg'
 
 const Logo = (props) => {
   return (

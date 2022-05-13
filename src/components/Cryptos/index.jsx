@@ -6,23 +6,24 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper'
 import 'swiper/scss'
 import 'swiper/css/pagination'
-import Section from '@components/Section'
-import Container from '@components/Container'
-import CryptoCard from '@components/CryptoCard'
-import imgBTC from '@assets/images/content/cryptos-01.jpg?as=webp'
-import imgETH from '@assets/images/content/cryptos-02.jpg?as=webp'
-import imgLTC from '@assets/images/content/cryptos-03.jpg?as=webp'
-import imgXTZ from '@assets/images/content/cryptos-04.jpg?as=webp'
-import imgADA from '@assets/images/content/cryptos-05.jpg?as=webp'
-import imgDOGE from '@assets/images/content/cryptos-06.jpg?as=webp'
-import ArrowPrev from '@assets/images/svg/ui-arrow-prev.svg'
-import ArrowNext from '@assets/images/svg/ui-arrow-next.svg'
-import coinMN from '@assets/images/bg/coin-MN.png?as=webp'
-import coinLTC from '@assets/images/bg/coin-LTC-02.png?as=webp'
+import Section from '@/components/Section'
+import Container from '@/components/Container'
+import CryptoCard from '@/components/CryptoCard'
+import { cryptoData } from '@/data'
+import imgBTC from '@/assets/images/content/cryptos-01.jpg?as=webp'
+import imgETH from '@/assets/images/content/cryptos-02.jpg?as=webp'
+import imgLTC from '@/assets/images/content/cryptos-03.jpg?as=webp'
+import imgXTZ from '@/assets/images/content/cryptos-04.jpg?as=webp'
+import imgADA from '@/assets/images/content/cryptos-05.jpg?as=webp'
+import imgDOGE from '@/assets/images/content/cryptos-06.jpg?as=webp'
+import ArrowPrev from '@/assets/images/svg/ui-arrow-prev.svg'
+import ArrowNext from '@/assets/images/svg/ui-arrow-next.svg'
+import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
+import coinLTC from '@/assets/images/bg/coin-LTC-02.png?as=webp'
 
 const sectionProps = {
-  heading: 'Available Cryptos',
-  paragraph: 'Check out our cryptocurrency offerings and current exchange rates.',
+  heading: cryptoData.heading,
+  paragraph: cryptoData.paragraph,
   id: 'cryptosSection',
   variant: 'wide',
 }
