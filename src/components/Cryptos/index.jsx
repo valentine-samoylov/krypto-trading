@@ -1,7 +1,6 @@
 // Cryptos
-import { useState, useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { useParallax } from 'react-scroll-parallax'
-import axios from 'axios'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination } from 'swiper'
 import 'swiper/scss'
@@ -9,13 +8,8 @@ import 'swiper/css/pagination'
 import Section from '@/components/Section'
 import Container from '@/components/Container'
 import CryptoCard from '@/components/CryptoCard'
+import usePricesRequest from '@/hooks/usePricesRequest'
 import { cryptoData } from '@/data'
-import imgBTC from '@/assets/images/content/cryptos-01.jpg?as=webp'
-import imgETH from '@/assets/images/content/cryptos-02.jpg?as=webp'
-import imgLTC from '@/assets/images/content/cryptos-03.jpg?as=webp'
-import imgXTZ from '@/assets/images/content/cryptos-04.jpg?as=webp'
-import imgADA from '@/assets/images/content/cryptos-05.jpg?as=webp'
-import imgDOGE from '@/assets/images/content/cryptos-06.jpg?as=webp'
 import ArrowPrev from '@/assets/images/svg/ui-arrow-prev.svg'
 import ArrowNext from '@/assets/images/svg/ui-arrow-next.svg'
 import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
@@ -38,65 +32,12 @@ const Cryptos = () => {
   const navigationPrevRef = useRef(null)
   const navigationNextRef = useRef(null)
 
-  const [coinPrices, setCoinsPrices] = useState([])
+  const { coinPrices } = usePricesRequest(endpoint)
 
-  const getCoinPrices = () => {
-    axios.get(endpoint).then((res) => {
-      let coinsData = res.data
-      let coinPrices = []
-      let price
-
-      for (let i = 0; i < coinsData.length; i++) {
-        price = Math.round((coinsData[i].current_price + Number.EPSILON) * 100) / 100
-        coinPrices.push(price)
-      }
-
-      setCoinsPrices(coinPrices)
-    })
-  }
-
-  useEffect(() => {
-    getCoinPrices()
-  }, [])
-
-  const cryptosContent = [
-    {
-      imgSrc: imgBTC,
-      title: 'Bitcoin',
-      text: 'A very accessible and versatile currency with big liquidity and high return potential. ',
-      cryptoPrice: coinPrices[0],
-    },
-    {
-      imgSrc: imgETH,
-      title: 'Ethereum',
-      text: 'A secure, decentralized currency, second-most popular Crypto in the market.',
-      cryptoPrice: coinPrices[1],
-    },
-    {
-      imgSrc: imgLTC,
-      title: 'Litecoin',
-      text: 'Fast transitions, lower fees than other cryptocurrencies. Explosive returns are possible during uptrends.',
-      cryptoPrice: coinPrices[2],
-    },
-    {
-      imgSrc: imgXTZ,
-      title: 'Tezos',
-      text: 'Self-amending multi-purpose blockchain platform for secure decentralized transactions.',
-      cryptoPrice: coinPrices[3],
-    },
-    {
-      imgSrc: imgADA,
-      title: 'Cardano',
-      text: 'An environmentally friendly currency with low fees for fast and secure decentralized transactions.',
-      cryptoPrice: coinPrices[4],
-    },
-    {
-      imgSrc: imgDOGE,
-      title: 'Dogecoin',
-      text: 'Send value quick and securely to anyone internally, accepted by many vendors. Perfectly fits for low-capital investments.',
-      cryptoPrice: coinPrices[5],
-    },
-  ]
+  const cardContent = cryptoData.cardData.map((item, idx) => ({
+    ...item,
+    ...coinPrices[idx],
+  }))
 
   return (
     <Section className="pb-20 lg:pb-36" {...sectionProps}>
@@ -143,7 +84,7 @@ const Cryptos = () => {
             },
           }}
         >
-          {cryptosContent.map((item, idx) => (
+          {cardContent.map((item, idx) => (
             <SwiperSlide className="max-w-[18rem] md:max-w-[20rem] lg:max-w-none" key={idx}>
               <CryptoCard data={item} />
             </SwiperSlide>

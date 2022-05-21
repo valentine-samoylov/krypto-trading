@@ -8,6 +8,13 @@ import movHowTo02 from '@/assets/videos/how-to-02.mp4'
 import movHowTo03 from '@/assets/videos/how-to-03.mp4'
 import movHowTo04 from '@/assets/videos/how-to-04.mp4'
 
+import imgBTC from '@/assets/images/content/cryptos-01.jpg?as=webp'
+import imgETH from '@/assets/images/content/cryptos-02.jpg?as=webp'
+import imgLTC from '@/assets/images/content/cryptos-03.jpg?as=webp'
+import imgXTZ from '@/assets/images/content/cryptos-04.jpg?as=webp'
+import imgADA from '@/assets/images/content/cryptos-05.jpg?as=webp'
+import imgDOGE from '@/assets/images/content/cryptos-06.jpg?as=webp'
+
 import IconContest from '@/assets/images/svg/features-icon-01.svg'
 import IconCommission from '@/assets/images/svg/features-icon-02.svg'
 import IconSecurity from '@/assets/images/svg/features-icon-03.svg'
@@ -60,6 +67,38 @@ export const howToData = {
 export const cryptoData = {
   heading: 'Available Cryptos',
   paragraph: 'Check out our cryptocurrency offerings and current exchange rates',
+  cardData: [
+    {
+      imgSrc: imgBTC,
+      title: 'Bitcoin',
+      text: 'A very accessible and versatile currency with big liquidity and high return potential. ',
+    },
+    {
+      imgSrc: imgETH,
+      title: 'Ethereum',
+      text: 'A secure, decentralized currency, second-most popular Crypto in the market.',
+    },
+    {
+      imgSrc: imgLTC,
+      title: 'Litecoin',
+      text: 'Fast transitions, lower fees than other cryptocurrencies. Explosive returns are possible during uptrends.',
+    },
+    {
+      imgSrc: imgXTZ,
+      title: 'Tezos',
+      text: 'Self-amending multi-purpose blockchain platform for secure decentralized transactions.',
+    },
+    {
+      imgSrc: imgADA,
+      title: 'Cardano',
+      text: 'An environmentally friendly currency with low fees for fast and secure decentralized transactions.',
+    },
+    {
+      imgSrc: imgDOGE,
+      title: 'Dogecoin',
+      text: 'Send value quick and securely to anyone internally, accepted by many vendors. Perfectly fits for low-capital investments.',
+    },
+  ],
 }
 
 // featuresData
