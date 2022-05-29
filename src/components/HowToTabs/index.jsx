@@ -3,12 +3,12 @@ import { Tab } from '@headlessui/react'
 import useClassNames from '@/hooks/useClassNames'
 import VideoPlayer from '@/components/VideoPlayer'
 
-const HowToTabs = (props) => {
+const HowToTabs = ({ data }) => {
   return (
     <Tab.Group vertical>
       <div className="flex flex-col items-center gap-8 sm:flex-row">
         <Tab.Panels className="w-full max-w-[25rem] sm:w-1/2 sm:max-w-none">
-          {props.data.map((item, idx) => (
+          {data.map((item, idx) => (
             <Tab.Panel key={idx}>
               <VideoPlayer data={item} />
             </Tab.Panel>
@@ -20,7 +20,7 @@ const HowToTabs = (props) => {
             Steps to trade
           </h3>
           <ul className="flex flex-col items-start gap-6 counter-parent">
-            {props.data.map((item, idx) => (
+            {data.map((item, idx) => (
               <li key={idx}>
                 <Tab
                   className={({ selected }) =>

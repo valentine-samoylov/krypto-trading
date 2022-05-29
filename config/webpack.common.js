@@ -3,7 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const paths = require('./paths')
-const globals = require('../src/globals/globals')
+const seo = require('../public/seo')
 
 module.exports = {
   entry: [`${paths.src}/index.js`],
@@ -50,7 +50,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'webpack Boilerplate',
       template: `${paths.public}/template.ejs`,
-      templateParameters: globals,
+      templateParameters: seo,
       filename: 'index.html',
       inject: 'body',
     }),

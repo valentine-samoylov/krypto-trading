@@ -91,7 +91,17 @@ const Footer = () => {
                 ))}
               </ul>
 
-              <div className="sm:mx-auto sm:text-center">Copyright 2022 xpence</div>
+              <div className="sm:mx-auto sm:text-center">
+                <span>Design by xpence, </span>
+                <a
+                  className="transition-colors lg:hover:text-red-500 lg:hover:underline"
+                  href="https://valentine-samoylov.vercel.app/"
+                  rel="noreferrer noopener"
+                  target="_blank"
+                >
+                  coded with ❤️ by Valentine Samoylov
+                </a>
+              </div>
 
               <ul className="flex sm:justify-end gap-4 sm:gap-3 sm:min-w-[200px]">
                 {footerData.socialLinks.map((item, idx) => (

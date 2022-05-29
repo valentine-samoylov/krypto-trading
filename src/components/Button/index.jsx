@@ -16,13 +16,13 @@ const buttonProps = {
     'transition lg:hover:scale-105 lg:active:shadow-inner lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-red-500/40',
 }
 
-const Button = (props) => {
+const Button = ({ kind, variant, shadow, href, ...props }) => {
   return (
     <a
-      className={`${buttonProps.kind[props.kind]} ${buttonProps.variant[props.variant || '']} ${
-        buttonProps.shadow[props.shadow || '']
+      className={`${buttonProps.kind[kind]} ${buttonProps.variant[variant || '']} ${
+        buttonProps.shadow[shadow || '']
       } ${buttonProps.general} ${buttonProps.transitions}`}
-      href={props.href || '#'}
+      href={href || '#'}
       {...props}
     ></a>
   )
