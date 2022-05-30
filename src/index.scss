@@ -207,7 +207,7 @@ div.react-player__preview {
 
 .swiper-slide-active.slide-shadow article {
   box-shadow: 0 0 2.5rem rgba(#ef4444, 0.4);
-  transition: all 1s ease-in;
+  transition: box-shadow 1s ease-in;
 }
 
 .swiper-pagination {
