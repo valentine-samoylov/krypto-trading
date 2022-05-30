@@ -11,15 +11,21 @@ import Container from '@/components/Container'
 import SectionHeader from '@/components/SectionHeader'
 import CryptoCard from '@/components/CryptoCard'
 import usePricesRequest from '@/hooks/usePricesRequest'
-import { cryptoData } from '@/data'
+import data from '@/db'
 import ArrowPrev from '@/assets/images/svg/ui-arrow-prev.svg'
 import ArrowNext from '@/assets/images/svg/ui-arrow-next.svg'
 import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
 import coinLTC from '@/assets/images/bg/coin-LTC-02.png?as=webp'
+import imgBTC from '@/assets/images/content/cryptos-01.jpg?as=webp'
+import imgETH from '@/assets/images/content/cryptos-02.jpg?as=webp'
+import imgLTC from '@/assets/images/content/cryptos-03.jpg?as=webp'
+import imgXTZ from '@/assets/images/content/cryptos-04.jpg?as=webp'
+import imgADA from '@/assets/images/content/cryptos-05.jpg?as=webp'
+import imgDOGE from '@/assets/images/content/cryptos-06.jpg?as=webp'
 
 const sectionHeaderProps = {
-  heading: cryptoData.heading,
-  paragraph: cryptoData.paragraph,
+  heading: data.cryptos.heading,
+  paragraph: data.cryptos.paragraph,
 }
 
 const endpoint =
@@ -34,9 +40,19 @@ const Cryptos = () => {
 
   const { coinPrices } = usePricesRequest(endpoint)
 
-  const cardContent = cryptoData.cardData.map((item, idx) => ({
+  const cardImgs = [
+    { img: imgBTC },
+    { img: imgETH },
+    { img: imgLTC },
+    { img: imgXTZ },
+    { img: imgADA },
+    { img: imgDOGE },
+  ]
+
+  const cardsContent = data.cryptos.items.map((item, idx) => ({
     ...item,
     ...coinPrices[idx],
+    ...cardImgs[idx],
   }))
 
   return (
@@ -86,7 +102,7 @@ const Cryptos = () => {
               },
             }}
           >
-            {cardContent.map((item, idx) => (
+            {cardsContent.map((item, idx) => (
               <SwiperSlide className="max-w-[18rem] md:max-w-[20rem] lg:max-w-none" key={idx}>
                 <CryptoCard data={item} />
               </SwiperSlide>

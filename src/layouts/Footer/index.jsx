@@ -1,7 +1,24 @@
 // Footer
+import { Link } from 'react-scroll'
 import Container from '@/components/Container'
+import data from '@/db'
 import Logo from '@/components/Logo'
-import { footerData } from '@/data'
+import IconYoutube from '@/assets/images/svg/social-youtube.svg'
+import IconLinkedIn from '@/assets/images/svg/social-linkedin.svg'
+import IconFacebook from '@/assets/images/svg/social-facebook.svg'
+import IconBitcoin from '@/assets/images/svg/social-bitcoin.svg'
+
+const socialIcons = [
+  { icon: <IconYoutube title="YouTube Channel" /> },
+  { icon: <IconLinkedIn title="LinkedIn Page" /> },
+  { icon: <IconFacebook title="Facebook Community" /> },
+  { icon: <IconBitcoin title="Bitcoin Website" /> },
+]
+
+const socialLinks = data.footer.social.links.map((item, idx) => ({
+  ...item,
+  ...socialIcons[idx],
+}))
 
 const Footer = () => {
   return (
@@ -11,39 +28,44 @@ const Footer = () => {
           <div className="flex flex-col flex-wrap gap-8 pb-14 sm:flex-row sm:items-start sm:max-w-none sm:text-left md:pb-16 lg:pb-20 lg:flex-nowrap">
             <div className="sm:max-w-[16rem]">
               <Logo className="mb-5 md:mb-8" />
-              <p className="text-lg">
-                Krypto is a global secure cryptocurrency trading platform. Contact our support team
-                for more information.
-              </p>
+              <p className="text-lg">{data.footer.text}</p>
             </div>
 
             <div className="flex flex-wrap gap-8 sm:flex-nowrap">
               <div className="md:min-w-[10rem]">
-                <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Links</h3>
+                <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">
+                  {data.footer.anchors.heading}
+                </h3>
                 <ul className="space-y-4 text-lg">
-                  {footerData.anchorLinks.map((item, idx) => (
+                  {data.footer.anchors.links.map((link, idx) => (
                     <li key={idx}>
-                      <a
+                      <Link
                         className="transition-colors lg:hover:text-red-500 lg:hover:underline"
-                        href={item.href}
+                        href="#"
+                        to={link.to}
+                        smooth={true}
+                        offset={-64}
+                        duration={1000}
                       >
-                        {item.linkLabel}
-                      </a>
+                        {link.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div className="md:min-w-[10rem]">
-                <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">Legal</h3>
+                <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">
+                  {data.footer.legal.heading}
+                </h3>
                 <ul className="space-y-4 text-lg">
-                  {footerData.legalLinks.map((item, idx) => (
+                  {data.footer.legal.links.map((link, idx) => (
                     <li key={idx}>
                       <a
                         className="transition-colors lg:hover:text-red-500 lg:hover:underline"
-                        href={item.href}
+                        href={link.href}
                       >
-                        {item.linkLabel}
+                        {link.label}
                       </a>
                     </li>
                   ))}
@@ -53,10 +75,10 @@ const Footer = () => {
 
             <div className="lg:ml-auto">
               <h3 className="mb-6 text-2xl text-red-500 font-medium uppercase md:mb-9">
-                Newsletter
+                {data.footer.newsletter.heading}
               </h3>
               <p className="mb-6 text-xl text-white text-white/60">
-                Over 25000 people have subscribed
+                {data.footer.newsletter.subheading}
               </p>
               <form action="#">
                 <div className="relative flex flex-col mb-3 md:min-w-[22rem]">
@@ -71,7 +93,7 @@ const Footer = () => {
                     value="Subscribe"
                   />
                 </div>
-                <p className="text-sm text-white/60">We don’t sell your email and spam</p>
+                <p className="text-sm text-white/60">{data.footer.newsletter.text}</p>
               </form>
             </div>
           </div>
@@ -79,13 +101,13 @@ const Footer = () => {
           <div className="pt-5">
             <div className="flex flex-col items-center flex-wrap gap-4 sm:flex-row">
               <ul className="flex flex-shrink-0 gap-4 sm:min-w-[200px]">
-                {footerData.creditsLinks.map((item, idx) => (
+                {data.footer.credits.links.map((link, idx) => (
                   <li key={idx}>
                     <a
                       className="transition-colors lg:hover:text-red-500 lg:hover:underline"
-                      href={item.href}
+                      href={link.href}
                     >
-                      {item.linkLabel}
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -104,13 +126,13 @@ const Footer = () => {
               </div>
 
               <ul className="flex sm:justify-end gap-4 sm:gap-3 sm:min-w-[200px]">
-                {footerData.socialLinks.map((item, idx) => (
+                {socialLinks.map((link, idx) => (
                   <li key={idx}>
                     <a
                       className="text-2xl sm:text-xs transition-colors lg:hover:text-red-500"
-                      href={item.href}
+                      href={link.href}
                     >
-                      {item.icon}
+                      {link.icon}
                     </a>
                   </li>
                 ))}

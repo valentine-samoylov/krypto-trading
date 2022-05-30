@@ -10,17 +10,37 @@ import Wrapper from '@/components/Wrapper'
 import SectionHeader from '@/components/SectionHeader'
 import Container from '@/components/Container'
 import TestimonialCard from '@/components/TestimonialCard'
-import { testimonialsData } from '@/data'
+import data from '@/db'
 import ArrowPrev from '@/assets/images/svg/ui-arrow-prev.svg'
 import ArrowNext from '@/assets/images/svg/ui-arrow-next.svg'
 import coinBTC from '@/assets/images/bg/coin-BTC.png?as=webp'
 import coinETH from '@/assets/images/bg/coin-ETH.png?as=webp'
 import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
+import authorImg01 from '@/assets/images/content/author-01.jpg?as=webp'
+import authorImg02 from '@/assets/images/content/author-02.jpg?as=webp'
+import authorImg03 from '@/assets/images/content/author-03.jpg?as=webp'
+import authorImg04 from '@/assets/images/content/author-04.jpg?as=webp'
+import authorImg05 from '@/assets/images/content/author-05.jpg?as=webp'
+import authorImg06 from '@/assets/images/content/author-06.jpg?as=webp'
 
 const sectionHeaderProps = {
-  heading: testimonialsData.heading,
-  paragraph: testimonialsData.paragraph,
+  heading: data.testimonials.heading,
+  paragraph: data.testimonials.paragraph,
 }
+
+const authorImgs = [
+  { img: authorImg01 },
+  { img: authorImg02 },
+  { img: authorImg03 },
+  { img: authorImg04 },
+  { img: authorImg05 },
+  { img: authorImg06 },
+]
+
+const cardsContent = data.testimonials.items.map((item, idx) => ({
+  ...item,
+  ...authorImgs[idx],
+}))
 
 const Testimonials = () => {
   const mnPlx = useParallax({ speed: 5 })
@@ -82,7 +102,7 @@ const Testimonials = () => {
               },
             }}
           >
-            {testimonialsData.content.map((item, idx) => (
+            {cardsContent.map((item, idx) => (
               <SwiperSlide
                 className="max-w-[18rem] slide-shadow md:max-w-[20rem] lg:max-w-none"
                 key={idx}

@@ -1,4 +1,6 @@
 // Button
+import { Link } from 'react-scroll'
+
 const buttonProps = {
   kind: {
     primary: 'bg-red-500',
@@ -16,15 +18,34 @@ const buttonProps = {
     'transition lg:hover:scale-105 lg:active:shadow-inner lg:focus:outline-none lg:focus:ring-2 lg:focus:ring-red-500/40',
 }
 
-const Button = ({ kind, variant, shadow, href, ...props }) => {
+const Button = ({ as, kind, variant, shadow, href, to, children, ...props }) => {
   return (
-    <a
-      className={`${buttonProps.kind[kind]} ${buttonProps.variant[variant || '']} ${
-        buttonProps.shadow[shadow || '']
-      } ${buttonProps.general} ${buttonProps.transitions}`}
-      href={href || '#'}
-      {...props}
-    ></a>
+    <>
+      {as === 'anchor' ? (
+        <Link
+          className={`${buttonProps.kind[kind]} ${buttonProps.variant[variant || '']} ${
+            buttonProps.shadow[shadow || '']
+          } ${buttonProps.general} ${buttonProps.transitions}`}
+          href="#"
+          to={to}
+          smooth={true}
+          offset={-64}
+          duration={1000}
+        >
+          {children}
+        </Link>
+      ) : (
+        <a
+          className={`${buttonProps.kind[kind]} ${buttonProps.variant[variant || '']} ${
+            buttonProps.shadow[shadow || '']
+          } ${buttonProps.general} ${buttonProps.transitions}`}
+          href={href || '#'}
+          {...props}
+        >
+          {children}
+        </a>
+      )}
+    </>
   )
 }
 

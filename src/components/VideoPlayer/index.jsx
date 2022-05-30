@@ -6,7 +6,7 @@ const VideoPlayer = ({ data }) => {
   return (
     <ReactPlayer
       className="width-full height-full rounded-xl aspect-vertical-video overflow-hidden object-cover max-w-[25rem] sm:max-w-none"
-      url={data.videoSrc}
+      url={data.mov}
       width="100%"
       height="auto"
       muted
@@ -17,7 +17,7 @@ const VideoPlayer = ({ data }) => {
           <PlayIcon width="1.25rem" height="1.25rem" />
         </button>
       }
-      light={data.previewSrc}
+      light={data.img}
     ></ReactPlayer>
   )
 }

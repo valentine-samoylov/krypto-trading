@@ -3,6 +3,7 @@ import { useParallax } from 'react-scroll-parallax'
 import Container from '@/components/Container'
 import Countdown from '@/components/Countdown'
 import Button from '@/components/Button'
+import data from '@/db'
 import bgImage from '@/assets/images/bg/hero-bg.jpg?as=webp'
 import IconBitcoin from '@/assets/images/svg/coin-icon-01.svg'
 import IconLitecoin from '@/assets/images/svg/coin-icon-02.svg'
@@ -12,30 +13,26 @@ import coinBTC from '@/assets/images/bg/coin-BTC.png?as=webp'
 import coinETH from '@/assets/images/bg/coin-ETH.png?as=webp'
 import coinLTC from '@/assets/images/bg/coin-LTC-01.png?as=webp'
 import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
-import { heroData } from '@/data'
 
-const currenciesData = [
+const cryptoIcons = [
   {
-    currencyIcon: <IconBitcoin width="1.5rem" height="1.5rem" />,
-    currencyLink: '#',
-    currencyText: 'Bitcoin',
+    icon: <IconBitcoin width="1.5rem" height="1.5rem" />,
   },
   {
-    currencyIcon: <IconLitecoin width="1.5rem" height="1.5rem" />,
-    currencyLink: '#',
-    currencyText: 'Litecoin',
+    icon: <IconLitecoin width="1.5rem" height="1.5rem" />,
   },
   {
-    currencyIcon: <IconChainlink width="1.5rem" height="1.5rem" />,
-    currencyLink: '#',
-    currencyText: 'Chainlink',
+    icon: <IconChainlink width="1.5rem" height="1.5rem" />,
   },
   {
-    currencyIcon: <IconSiacoin width="1.5rem" height="1.5rem" />,
-    currencyLink: '#',
-    currencyText: 'Siacoin',
+    icon: <IconSiacoin width="1.5rem" height="1.5rem" />,
   },
 ]
+
+const cryptoLinks = data.hero.currencies.list.map((item, idx) => ({
+  ...item,
+  ...cryptoIcons[idx],
+}))
 
 const Hero = () => {
   const btcPlx = useParallax({ speed: 10 })
@@ -73,31 +70,31 @@ const Hero = () => {
           ></figure>
 
           <h1 className="mb-7 pt-12 text-5xl text-center font-bold md:text-6xl lg:text-8xl ">
-            <span className="block">{heroData.heading1}</span>
-            <span className="block">{heroData.heading2}</span>
+            <span className="block">{data.hero.headingLine1}</span>
+            <span className="block">{data.hero.headingLine2}</span>
           </h1>
 
-          <Countdown />
+          <Countdown data={data.hero.countdown} />
 
           <div className="flex flex-col gap-6 mb-10 sm:flex-row sm:gap-8">
-            <Button kind="primary" variant="lg" shadow="xl" href="#downloadsSection">
-              Download App
+            <Button as="anchor" kind="primary" variant="lg" shadow="xl" to="downloadsSection">
+              {data.hero.buttons[0].text}
             </Button>
-            <Button kind="secondary" variant="lg" shadow="xl">
-              Trade Crypto
+            <Button as="anchor" kind="secondary" variant="lg" shadow="xl" to="howToSection">
+              {data.hero.buttons[1].text}
             </Button>
           </div>
 
-          <p className="mb-6 text-lg font-medium uppercase">We accept</p>
+          <p className="mb-6 text-lg font-medium uppercase">{data.hero.currencies.heading}</p>
           <ul className="grid grid-cols-2 gap-5 md:gap-8 lg:grid-cols-4">
-            {currenciesData.map((item, idx) => (
+            {cryptoLinks.map((link, idx) => (
               <li key={idx}>
                 <a
                   className="flex items-center text-xl transition ease-in-out lg:duration-300 lg:hover:text-red-500"
-                  href={item.currencyLink}
+                  href={link.href}
                 >
-                  {item.currencyIcon}
-                  <span className="ml-3">{item.currencyText}</span>
+                  {link.icon}
+                  <span className="ml-3">{link.label}</span>
                 </a>
               </li>
             ))}

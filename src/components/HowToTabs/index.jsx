@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react'
 import useClassNames from '@/hooks/useClassNames'
 import VideoPlayer from '@/components/VideoPlayer'
 
-const HowToTabs = ({ data }) => {
+const HowToTabs = ({ data, subheading }) => {
   return (
     <Tab.Group vertical>
       <div className="flex flex-col items-center gap-8 sm:flex-row">
@@ -17,7 +17,7 @@ const HowToTabs = ({ data }) => {
 
         <Tab.List className="flex flex-col items-center sm:w-1/2 md:p-4 lg:p-8 lg:px-20">
           <h3 className="mb-10 text-4xl text-center text-red-500 font-bold sm:text-left">
-            Steps to trade
+            {subheading}
           </h3>
           <ul className="flex flex-col items-start gap-6 counter-parent">
             {data.map((item, idx) => (

@@ -7,7 +7,7 @@ const CryptoCard = ({ data }) => {
       <div className="ol-blend-overlay">
         <img
           className="aspect-4/3 w-full object-cover lg:aspect-square"
-          src={data.imgSrc}
+          src={data.img}
           alt={data.title}
           loading="lazy"
         />
@@ -20,7 +20,7 @@ const CryptoCard = ({ data }) => {
             {data.price ? `$${data.price}` : 'loading...'}
           </span>
           <Button kind="primary" variant="lg">
-            Trade now
+            {data.btnText}
           </Button>
         </div>
       </div>

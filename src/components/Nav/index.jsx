@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-scroll'
 import useOnClickOutside from '@/hooks/useOnClickOutside'
 import LangSwitcher from '@/components/LangSwitcher'
-import { navLinks } from '@/data'
+import data from '@/db'
 import MenuOpen from '@/assets/images/svg/ui-menu-open.svg'
 import MenuClose from '@/assets/images/svg/ui-menu-close.svg'
 
@@ -53,16 +53,16 @@ const Nav = () => {
       >
         <div className="container">
           <ul className="flex flex-col pt-16 pb-8 divide-y divide-white/20 lg:flex-row lg:gap-2 lg:max-w-none lg:p-0 lg:divide-none">
-            {navLinks.map((link, idx) => (
+            {data.navLinks.map((link, idx) => (
               <li className="py-4 px-4 lg:px-6 lg:py-0" key={idx}>
                 <Link
                   className="uppercase transition-colors lg:hover:text-red-500"
+                  href="#"
                   activeClass="text-red-500"
                   to={link.to}
                   spy={true}
                   smooth={true}
                   offset={-64}
-                  href="#"
                   duration={1000}
                 >
                   {link.label}

@@ -5,13 +5,29 @@ import SectionHeader from '@/components/SectionHeader'
 import Container from '@/components/Container'
 import UniversityCard from '@/components/UniversityCard'
 import Button from '@/components/Button'
-import { universityData } from '@/data'
+import data from '@/db'
 import coinMN from '@/assets/images/bg/coin-MN.png?as=webp'
+import articleImg01 from '@/assets/images/content/article-01.jpg?as=webp'
+import articleImg02 from '@/assets/images/content/article-02.jpg?as=webp'
+import articleImg03 from '@/assets/images/content/article-03.jpg?as=webp'
+import articleImg04 from '@/assets/images/content/article-04.jpg?as=webp'
 
 const sectionHeaderProps = {
-  heading: universityData.heading,
-  paragraph: universityData.paragraph,
+  heading: data.university.heading,
+  paragraph: data.university.paragraph,
 }
+
+const articlesPreviews = [
+  { img: articleImg01 },
+  { img: articleImg02 },
+  { img: articleImg03 },
+  { img: articleImg04 },
+]
+
+const cardsContent = data.university.items.map((item, idx) => ({
+  ...item,
+  ...articlesPreviews[idx],
+}))
 
 const University = () => {
   const mnPlx = useParallax({ speed: 10 })
@@ -28,13 +44,13 @@ const University = () => {
           ></figure>
 
           <div className="grid gap-8 mb-12 md:grid-cols-2">
-            {universityData.content.map((item, idx) => (
+            {cardsContent.map((item, idx) => (
               <UniversityCard data={item} key={idx} />
             ))}
           </div>
           <div className="flex justify-center">
             <Button kind="secondary" variant="lg">
-              Enroll Crypto University
+              {data.university.btnText}
             </Button>
           </div>
         </div>
