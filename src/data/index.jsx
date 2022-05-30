@@ -41,11 +41,11 @@ import IconBitcoin from '@/assets/images/svg/social-bitcoin.svg'
 
 // navLinks
 export const navLinks = [
-  { scrollToId: '#howToSection', linkLabel: 'How it works' },
-  { scrollToId: '#cryptosSection', linkLabel: 'Cryptos' },
-  { scrollToId: '#featuresSection', linkLabel: 'Features' },
-  { scrollToId: '#testimonialsSection', linkLabel: 'Testimonials' },
-  { scrollToId: '#uniSection', linkLabel: 'University' },
+  { to: 'howToSection', label: 'How it works' },
+  { to: 'cryptosSection', label: 'Cryptos' },
+  { to: 'featuresSection', label: 'Features' },
+  { to: 'testimonialsSection', label: 'Testimonials' },
+  { to: 'uniSection', label: 'University' },
 ]
 
 // heroData
