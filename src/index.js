@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import ContextProviders from '@/context/ContextProviders'
-import './index.scss'
+import './index.css'
 import App from './App'
 
 const container = document.getElementById('app')

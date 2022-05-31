@@ -7096,7 +7096,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-nested@npm:5.0.6":
+"postcss-nested@npm:5.0.6, postcss-nested@npm:^5.0.6":
   version: 5.0.6
   resolution: "postcss-nested@npm:5.0.6"
   dependencies:
@@ -9144,6 +9144,7 @@ __metadata:
     mini-css-extract-plugin: ^2.4.4
     postcss: ^8.4.7
     postcss-loader: ^6.2.1
+    postcss-nested: ^5.0.6
     postcss-preset-env: ^7.4.3
     react: ^18.0.0
     react-dom: ^18.0.0

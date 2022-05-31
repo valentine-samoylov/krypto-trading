@@ -34,6 +34,15 @@
 }
 
 // General
+:root {
+  --color-white: #ffffff;
+  --color-red: #ef4444;
+  --color-red-40: rgba(239, 68, 68, 0.4);
+  --color-navy: #160e33;
+  --dark-blue-0: rgba(22, 14, 51, 0);
+  --dark-blue-30: rgba(22, 14, 51, 0.3);
+}
+
 html,
 *,
 *::before,
@@ -98,8 +107,8 @@ svg {
 }
 
 ::selection {
-  background-color: #ef4444;
-  color: #fff;
+  background-color: var(--color-red);
+  color: var(--color-white);
 }
 
 // Utility classes
@@ -127,26 +136,26 @@ svg {
 .ol-double-gradient {
   &::before {
     z-index: -1;
-    background: linear-gradient(121.69deg, #160e33 28.68%, rgba(22, 14, 51, 0.3) 69.08%);
+    background: linear-gradient(121.69deg, var(--color-navy) 28.68%, var(--dark-blue-30) 69.08%);
   }
 
   &::after {
     z-index: -2;
-    background: linear-gradient(0deg, #160e33 0%, rgba(22, 14, 51, 0) 31.25%);
+    background: linear-gradient(0deg, var(--color-navy) 0%, rgba(22, 14, 51, 0) 31.25%);
   }
 }
 
 .ol-blend-darken {
   &::before {
     z-index: -1;
-    background: #160e33;
+    background: var(--color-navy);
     mix-blend-mode: darken;
     opacity: 0.3;
   }
 
   &::after {
     z-index: -2;
-    background: #ef4444;
+    background: var(--color-red);
     mix-blend-mode: darken;
   }
 }
@@ -154,7 +163,7 @@ svg {
 .ol-blend-overlay {
   &::before {
     z-index: 1;
-    background: #ef4444;
+    background: var(--color-red);
     mix-blend-mode: overlay;
     opacity: 0.7;
     pointer-events: none;
@@ -178,10 +187,10 @@ svg {
     width: 2.625rem;
     height: 2.625rem;
     padding: 0 0.5rem;
-    background: #ef4444;
+    background: var(--color-red);
     border-radius: 50%;
     font-size: 1rem;
-    color: #160e33;
+    color: var(--color-navy);
     transform: translateY(-50%);
     will-change: inherit;
     counter-increment: li;
@@ -206,7 +215,7 @@ div.react-player__preview {
 }
 
 .swiper-slide-active.slide-shadow article {
-  box-shadow: 0 0 2.5rem rgba(#ef4444, 0.4);
+  box-shadow: 0 0 2.5rem var(--color-red-40);
   transition: box-shadow 1s ease-in;
 }
 
@@ -217,5 +226,5 @@ div.react-player__preview {
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: #ef4444;
+  background: var(--color-red);
 }
